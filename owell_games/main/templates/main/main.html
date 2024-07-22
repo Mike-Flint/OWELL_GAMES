@@ -13,222 +13,164 @@
     
     <div class="home">
         <div class="gradient-overlay"></div>
-        <header class="conteiner">
+        <header class="container">
             <nav>
                 <li><a class="wait text-content" href="">Box storm</a></li>
                 <li><a class="wait text-content" href="">Samurai honor</a></li>
-                <li><a class="active text-content" href=""><div class="lng-About_us">About us</div> <img src="{% static 'main/img/vector/Vector_arrow2.svg'%}" ></a></li>
+                <li><a class="active text-content" href=""><div class="lng-About_us">{{ About_us }}</div> <img src="{% static 'main/img/vector/Vector_arrow2.svg'%}" ></a></li>
             </nav>
         </header>
         <button class="btn_language" id="btn_language" onclick="menu_language()">
-            <div id="lng-lng">En</div>
+            <div class="lng-lng">{{ lng }}</div>
             <img id="arrow" src="{% static 'main/img/vector/Vector_arrow.svg'%}" alt="">
         </button>
         <div class="menu-language" id="menu">
             <ul>
-                <div class="one-language">
                     <li><button onclick="language('fv')"><img src="{% static 'main/img/flag/fr.svg'%}" alt="France"></button></li>
                     <li><button onclick="language('en')"><img src="{% static 'main/img/flag/gb-eng.svg'%}" alt="England"></button></li>
                     <li><button onclick="language('cn')"><img src="{% static 'main/img/flag/cn.svg'%}" alt="中国"></button></li>
-                </div>
-                <div class="two-language">
                     <li><button onclick="language('es')"><img src="{% static 'main/img/flag/es.svg'%}" alt="España"></button></li>
                     <li><button onclick="language('ua')"><img src="{% static 'main/img/flag/ua.svg'%}" alt="Україна"></button></li>
                     <li><button onclick="language('in')"><img src="{% static 'main/img/flag/in.svg'%}" alt="भारत"></button></li>
-                </div>
-                <div class="tree-language">
                     <li><button onclick="language('kr')"><img src="{% static 'main/img/flag/kr.svg'%}" alt="한국"></button></li>
                     <li><button onclick="language('pl')"><img src="{% static 'main/img/flag/pl.svg'%}" alt="Polska"></button></li>
                     <li><button onclick="language('tr')"><img src="{% static 'main/img/flag/tr.svg'%}" alt="Türkiye"></button></li>
-                </div>
-                <div class="four-language">
                     <li><button onclick="language('de')"><img src="{% static 'main/img/flag/de.svg'%}" alt="Deutschland"></button></li>
                     <li><button onclick="language('br')"><img src="{% static 'main/img/flag/br.svg'%}" alt="Brasil"></button></li>
                     <li><button onclick="language('jp')"><img src="{% static 'main/img/flag/jp.svg'%}" alt="日本"></button></li>
-                </div>
-                <div class="five-language">
                     <li><button onclick="language('it')"><img src="{% static 'main/img/flag/it.svg'%}" alt="Italia"></button></li>
-                </div>
             </ul>
         </div>
-        <div class="conteiner">
+        <div class="container">
             <div class="hero">
                 <img class="OWELL" src="{% static 'main/img/Owel_Games.png'%}" alt=""> <br>
-                <div class="text">
+                <div>
                     <div class="text-content lng-owell_games">
-                        Owell games is a Ukrainian team 
-                        game development team. Which is 
-                        is interested in maximizing productivity
-                        and excellent results that will 
-                        bring joy to our players. 
+                        {{ owell_games }}
                     </div>
                 </div>
-                <button onclick="scrolll()"  class="button-swipe lng-more_about_us">More about us</button>
+                <button onclick="scrolll()"  class="button-swipe lng-more_about_us">{{ more_about_us }}</button>
             </div>
         </div>
     </div>
     <hr>
-    <div class="history conteiner">
-        <div class="img-history conteiner"></div>
-        <div class="text">
-            <p class="lng-subheader_history">START OUR HISTORY</p>
+    <div class="history container">
+        <div class="img-history container"></div>
+        <div class="block-history">
+            <p class="lng-subheader_history">{{ subheader_history }}</p>
             <div class="text-content lng-history">
-                The Owell Games team was assembled by Tom Owell in 2024.
-                It started with Ukrainian developers only. 
-                The first project of Owell Games was Samurai Honor.
-                After a while, as a result of negotiations,
-                Tom Owell was able to get the materials of his unreleased game Box Storm. 
-                And now both projects are being actively worked on by 
-                the team and they hope for a great potential of the project.
+                {{ history }}
             </div>
         </div>
     </div>
     <hr>
-    <div class="idea conteiner">
-        <div class="text">
-            <p class="lng-subheader_idea">OUR IDEAS</p>
+    <div class="idea container">
+        <div class="idea-block">
+            <p class="lng-subheader_idea">{{ subheader_idea }}</p>
             <div class="text-content lng-idea">
-                Today, it is obvious to us that 
-                fact that without an idea, no project will reach
-                its maximum potential. Even though we are just starting out
-                but even now we have ideas and goals that we are aiming at.
+                {{ idea }}
             </div>
             <br>
         </div>
-        <ul class="text">
-            <li class="platforms"><img src="{% static 'main/img/platforms.png'%}" alt="">
-                <p class="mini-p lng-subheader_platform">PLATFORMS</p>
-                <div class="text-content">
-                    <div class="lng-platform">
-                        We believe that games should be
-                        be accessible and therefore will be
-                        be on the most accessible
-                        platforms, and will only
-                        expanding. 
+        <ul>
+            <li class="platforms">
+                <img src="{% static 'main/img/platforms.png'%}" alt="">
+                <div class="block-idea">
+                    <p class="mini-p lng-subheader_platform">{{ subheader_platform }}</p>
+                    <div class="text-content">
+                        <div class="lng-platform">
+                            {{ platform }}
+                        </div>
+                        <b class="lng-platform_b">{{ platform_b }}</b>
                     </div>
-                    <b class="lng-platform_b">"Your convenience is our priority"</b>
                 </div>
             </li>
             <li class="languages">
                 <img src="{% static 'main/img/languages.png'%}" alt="">
-                <p class="mini-p lng-subheader_language">LANGUAGES</p>
-                <div class="text-content lng-language">
-                    The interface and text are very
-                    important aspect
-                    of the game process. That's why
-                    we are interested in making 
-                    it convenient for you
-                    to play our games in your native
-                    language.
+                <div class="block-idea">
+                    <p class="mini-p lng-subheader_language">{{ subheader_language }}</p>
+                    <div class="text-content lng-language">
+                        {{ language }}
+                    </div>
                 </div>
             </li>
             <li class="community">
                 <img src="{% static 'main/img/community.png'%}" alt="">
-                <p class="mini-p lng-subheader_community">COMMUNITY</p>
-                <div class="text-content lng-community">
-                    Our games are created primarily
-                    and foremost to give
-                    new and positive emotions.
-                    That's why we are ready to
-                    listen to you  and correct or add
-                    those aspects that will
-                    improve your gaming 
-                    experience.
+                <div class="block-idea">
+                    <p class="mini-p lng-subheader_community">{{ subheader_community }}</p>
+                    <div class="text-content lng-community">
+                        {{ community }}
+                    </div>
                 </div>
             </li>
         </ul>
     </div>
     <hr>
-    <div class="convenience conteiner">
-        <div class="text">
-            <p class="lng-subheader_convenience">CONVENIENCE IS A PRIORITY WHY?</p>
+    <div class="convenience container">
+        <div>
+            <p class="lng-subheader_convenience">{{ subheader_convenience }}</p>
             <div class="text-content lng-convenience">
-                In our team, the convenience of the gaming experience and the ease
-                of in creation is a priority for us.  But why convenience? The reason is simple. When you are comfortable, you can get
-                optimal gaming experience. When it is convenient for us in development
-                we can provide you with a new high-quality
-                project. Therefore, our main priority is
-                is convenience. Our first thought is always "Will the player
-                will it be convenient for the player to play this way?". 
-                Or as an example, when developing this
-                website, we thought, "Will it be convenient for the user to read
-                the information? Will it be convenient for the programmer to create
-                our design?". It is up to you to decide how well we
-                have done our job.
+                {{ convenience }}
             </div>
         </div>
         <div class="img-convenience"></div>
     </div>
-    <div class="convenience-two conteiner" >
+    <div class="convenience-two container" >
         <div class="one">
-            <div class="text">
-                <p class="lng-subheader_convenience_mb">CONVENIENCE IS A PRIORITY WHY?</p>
+            <div>
+                <p class="lng-subheader_convenience_mb">{{ subheader_convenience_mb }}</p>
                 <div class="text-content lng-convenience_mb">
-                    In our team, the convenience of the gaming experience and the ease
-                    of in creation is a priority for us.  But why convenience? 
-                    The reason is simple. When you are comfortable, you can get
-                    optimal gaming experience. When it is convenient for us in development
-                    we can provide you with a new high-quality
-                    project. Therefore, our main priority is
-                    is convenience. 
+                    {{ convenience_mb }}
                  </div>
             </div>
             <div class="img-convenience"></div>
         </div>
         <div class="two">
             <div class="img-convenience-two"></div>
-            <div class="text">
-                <p class="lng-subheader_comfort_mb">WE THINK ABOUT COMFORT</p>
+            <div >
+                <p class="lng-subheader_comfort_mb">{{ subheader_comfort_mb }}</p>
                 <div class="text-content lng-comfort_mb">
-                    Our first thought is always "Will the player will it be convenient for the player to play this way?". 
-                    Or as an example, when developing this website, we thought, "Will it be convenient for the user to read
-                    the information? Will it be convenient for the programmer to create
-                    our design?". It is up to you to decide how well we
-                    have done our job.</div>
+                    {{ comfort_mb }}
+                </div>
             </div>
         </div>
     </div>
     <hr>
     <div class="projects">
-        <div class="text conteiner">
-            <p class="lng-subheader_projects">OUR CURRENT PROJECTS</p>
+        <div class="projects-text container">
+            <p class="lng-subheader_projects">{{ subheader_projects }}</p>
             <div class="text-content lng-projects">
-                Our team is actively working on various projects. Below you can
-                see the current projects we are supporting or developing.
+                {{ projects }}
             </div>
         </div>
-        <img class="box_floor" src="{% static 'main/img/Box_Storm/box_floor.png'%}" alt="">
-        <div class="Box-Storm conteiner">
+        <div class="Box-Storm container">
+            <a class="button-custom" href="">
+                <div class="lng-more_about_BS">{{ more_about_BS }} </div>                        
+                <img class="box" src="{% static 'main/img/Box_Storm/box.png'%}" alt="">
+            </a>
             <img class="mob" src="{% static 'main/img/Box_Storm/mob.png'%}" alt="">
-            <div class="text">
+            <img class="box_two" src="{% static 'main/img/Box_Storm/box_two.png'%}" alt="">
+            <div class="BS">
                 <p>BOX STORM</p>
-                <div class="text-content lng-BS">
-                    Box storm. This is a project that began its development in
-                    January 2024. But due to differences of opinion between Tom Owell
-                    and his colleagues, the project was closed. Six months later, Tom created
-                    his own project, Owell Games. And he was able to bring Box Storm back. 
-                    Which is now being actively finalized and prepared for release.
+                <div class="text-content">
+                    <div class="lng-BS">
+                        {{ BS }}
+                    </div>
                 </div>
-                <a class="button-castom" href="">
-                    <div class="lng-more_about_BS">Read more about Box Storm </div>                        
-                    <img class="box" src="{% static 'main/img/Box_Storm/box.png'%}" alt="">
-                </a>
             </div>
         </div>
-        <img class="bamboo" src="{% static 'main/img/Samurai_Honor/bamboo.png'%}" alt="Bamboo">
-        <div class="Samurai-Honor conteiner">
-            <div class="text">
+        <div class="Samurai-Honor container">
+            <a class="button-custom lng-more_about_SH" href="">
+                {{ more_about_SH }}                         
+            </a>
+            <img class="bamboo" src="{% static 'main/img/Samurai_Honor/bamboo.png'%}" alt="Bamboo">
+            <div class="SH">
                 <p>SAMURAI HONOR</p>
-                <div class="text-content lng-SH">
-                    Samurai Honor. The debut project of Owell Games. In which a lot of effort 
-                    a lot of effort was put into it. And even if Samurai Honor is the 
-                    starting point for Owell Games. Each of the participants is committed to the project
-                    100% to the project. In an effort to create a gaming experience for you
-                    that will bring you good and positive emotions! 
+                <div class="text-content">
+                    <div class="lng-SH">
+                        {{ SH }}
+                    </div>
                 </div>
-                <a class="button-castom lng-more_about_SH" href="">
-                    Read more about Samurai Honor                            
-                </a>
             </div>
             <img class="samurai" src="{% static 'main/img/Samurai_Honor/samurai.png'%}" alt="Samurai">
         </div>
@@ -237,16 +179,6 @@
         <img class="OWELL" src="{% static 'main/img/Owel_Games.png'%}" alt="Owel_Games">
     </div>
     <style>
-        @font-face {
-            font-family: 'Latoo';
-            src: url("{% static 'main/css/fonts/Lato_Italic.woff2'%}") format('woff2');
-            font-weight: normal;
-            font-style: normal;
-        }
-        @font-face {
-            font-family: "Latoo";
-            src: url("{% static 'main/css/fonts/Lato_Italic.ttf'%}") format("truetype");
-        }
         .home {
             background-image: url("{% static 'main/img/owell_forest.png'%}");
         }

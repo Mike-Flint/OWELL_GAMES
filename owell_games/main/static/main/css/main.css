@@ -7,8 +7,8 @@
 }
 @font-face {
     font-family: 'Lato';
-    src: local('Lato Bold'), local('Lato-Bold'), url('../css/fonts/lato/latobold.woff2') format('woff2'), url('../css/fonts/lato/latobold.woff') format('woff'), url('../css/fonts/lato/latobold.ttf') format('truetype');
-    font-weight: 700;
+    src: local('Lato Semibold'), local('Lato-Semibold'), url('../css/fonts/lato/latosemibold.woff2') format('woff2'), url('../css/fonts/lato/latosemibold.woff') format('woff'), url('../css/fonts/lato/latosemibold.ttf') format('truetype');
+    font-weight: 600;
     font-style: normal;
 }
 @font-face {
@@ -23,9 +23,14 @@
     font-weight: 800;
     font-style: normal;
 }
-
-
-
+::-webkit-scrollbar {
+    width: 15px;
+    background: #14172f9c;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2f366b;
+    border-radius: 20px;
+}
 * {
     margin: 0;
     padding: 0;
@@ -54,7 +59,7 @@ hr {
     width: 400px;
     margin: 0 auto;
 }
-.conteiner{
+.container{
     width: 1200px;
     margin: 0 auto;
 }
@@ -79,7 +84,40 @@ p {
     font-size: 45px;
     margin-bottom: 20px;
 }
-
+.button-custom {
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    text-align: left;
+    background: linear-gradient(90deg, #F9C49F , #D67157,#F9C49F );
+    background-size: 150%;
+    padding: 20px 30px;
+    border-radius: 30px;
+    font-size: 25px;
+    color: var(--text);
+    transition: all 0.7s ease;
+}
+.button-custom:hover{
+    background-position: 200px;
+}
+.hero .button-swipe {
+    margin-left: 170px;
+}
+.button-swipe {
+    border: 0px;
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    text-align: left;
+    background: linear-gradient(90deg, #F9C49F , #D67157,#F9C49F );
+    background-size: 150%;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 30px;
+    color: var(--text);
+    transition: all 0.7s ease;
+}
+.button-swipe:hover {
+    background-position: 200px;
+}
 .home {
     margin: 0 auto;
     position: relative;
@@ -126,40 +164,6 @@ p {
     background: linear-gradient(to left, var(--bg-body) 1%, rgba(0, 0, 0, 0) 20%);
     pointer-events: none;
 }
-.button-castom {
-    font-family: "Lato", sans-serif;
-    font-weight: 700;
-    text-align: left;
-    background: linear-gradient(90deg, #F9C49F , #D67157,#F9C49F );
-    background-size: 150%;
-    padding: 20px 30px;
-    border-radius: 30px;
-    font-size: 25px;
-    color: var(--text);
-    transition: all 0.7s ease;
-}
-.button-castom:hover{
-    background-position: 200px;
-}
-.hero .button-swipe {
-    margin-left: 170px;
-}
-.button-swipe {
-    border: 0px;
-    font-family: "Lato", sans-serif;
-    font-weight: 700;
-    text-align: left;
-    background: linear-gradient(90deg, #F9C49F , #D67157,#F9C49F );
-    background-size: 150%;
-    padding: 15px 30px;
-    border-radius: 30px;
-    font-size: 30px;
-    color: var(--text);
-    transition: all 0.7s ease;
-}
-.button-swipe:hover {
-    background-position: 200px;
-}
 /*------------------------------------- header -------------------------------------*/
 header {
     padding-top: 30px;
@@ -205,7 +209,6 @@ header nav{
     transition: all 200ms ease;
 }
 /*------------------------------------- /header -------------------------------------*/
-
 /*------------------------------------- button language -------------------------------------*/
 .btn_language {
     color: var(--bt-text);
@@ -235,15 +238,14 @@ header nav{
     padding: 13px;
     top: 65px;
     right: 5px ; 
-    width: 165px;
-    height: 210px;
+    width: 225px;
+    height: 170px;
     background: #DDC493;
     border-radius:  15px 0px 15px 15px;
 }
 .menu-language ul{
-    display: block;
-    list-style: none;
-
+    display: flex;
+    flex-wrap: wrap;
 }
 .menu-language ul button{
     border-style: none;
@@ -252,18 +254,13 @@ header nav{
     height: 37.5px;
     transition: all 250ms ease;
 }
-.menu-language ul .one-language,
-.menu-language ul .two-language,
-.menu-language ul .tree-language,
-.menu-language uL .four-language,
-.menu-language ul .five-language{
-    display: flex;
-}
 .menu-language ul button:hover {
     transform: scale(1.2);
     cursor: pointer;
 }
 /*------------------------------------- /button language -------------------------------------*/
+
+/*------------------------------------- hero -------------------------------------*/
 .hero {
     margin-top: 150px;
 }
@@ -274,13 +271,13 @@ header nav{
 .hero a {
     margin-left: 180px;
 }
+/*------------------------------------- /hero -------------------------------------*/
+
 /*------------------------------------- history -------------------------------------*/
 .history {
     margin-top: 100px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
 }
 .history .img-history {
     flex: 0 0 auto; 
@@ -301,8 +298,7 @@ header nav{
     text-align: center;
 }
 .idea div .text-content {
-    width: 800px;
-    margin: 0 auto;
+    width: 900px;
     margin-bottom: 20px;
 }
 .idea ul {
@@ -320,8 +316,9 @@ header nav{
     height: 150px;
     margin: 40px 0 40px 0;
 }
-.idea ul li p {
-    font-weight: 600;
+.idea ul li .block-idea .text-content,
+.idea ul li .block-idea {
+    width: 390px;
 }
 .idea ul .platforms,
 .idea ul .community {
@@ -349,100 +346,159 @@ header nav{
     display: flex;
     justify-content: space-between; 
 }
-
 .img-convenience {
     margin: auto 0;
     flex: 0 0 auto; 
-    width: 648px; 
-    height: 648px; 
+    width: 600px; 
+    height: 600px; 
     background-size: cover; 
 }
 .convenience-two {
     display: none;
 }
+.convenience-two div{
+    text-align: center;
+    width: 400px;
+}
+.convenience-two .one{
+    margin: 30px 0 15px 0;
+    display: flex;
+}
+.convenience-two .one .text-content{
+    margin-left: 10px;
+    width: 260px ;
+}
+.convenience-two .one .img-convenience{
+    z-index: -1;
+    margin: auto 0;
+    width: 130px;
+    height: 190px;
+}
+.convenience-two .two{
+    margin: 15px 0 30px 0;
+    display: flex;
+}
+.convenience-two .two .text-content{
+    justify-content: center;
+    width: 260px;
+    margin-left: 20px;
+}
+.convenience-two .two .img-convenience-two{
+    margin: auto 0;
+    width: 130px;
+    height: 190px;
+}
 /*------------------------------------- /convenience -------------------------------------*/
 .projects {
     position: relative;
 }
-.projects .text {
-    margin: 100px auto 50px auto;
+.projects .projects-text {
+    margin: 100px auto 200px auto;
     text-align: center;
     width: 900px;
 }
 /*------------------------------------- Box-Storm -------------------------------------*/
 .Box-Storm{
+    position: relative;
     display: flex;
-    margin-bottom: 100px;
+    align-items:center ;
+    justify-content: center;
+    margin-bottom: 200px;
+}
+.Box-Storm div {
+    text-align: center;
+}
+.Box-Storm .text-content {
+    position: relative;
+    width: 600px;
+}
+.Box-Storm .text-content div{
+    text-align: right;
+}
+.Box-Storm .button-custom {
+    position: absolute;
+    background: linear-gradient(90deg, #90222B, #D16862, #90222B);
+    background-size: 200%;
+    bottom: -100px;
+    right: 50px;
+    width: auto;
+    padding-right: 150px;
+}
+.Box-Storm .button-custom:hover {
+    background-position: -250px;
+}
+.Box-Storm .button-custom div {
+    text-align: left;
+}
+.Box-Storm .button-custom .box{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: -40px;
+    right: -20px;  
 }
 .Box-Storm .mob {
     margin: auto 0;
-    width: 550px;
-    height: 500px;
-}
-.Box-Storm .text .text-content{
-    margin-bottom: 50px;
-}
-.Box-Storm .text .button-castom{
-    background: linear-gradient(90deg, #90222B, #D16862, #90222B);
-    background-size: 200%;
     width: 450px;
-    margin: 0 auto;
-    position: relative;
-    text-align: left;
-    display: block;
+    height: 400px;
 }
-.Box-Storm .text .button-castom:hover {
-    background-position: -250px;
-}
-
-.Box-Storm .text .button-castom .box{
-    position: absolute;
-    top: -50px;
-    right: -20px;  
-}
-.box_floor{
-    position: absolute;
+.Box-Storm .box_two{
     z-index: -1;
-    top: 650px;
-    left: 0px;  
+    position: absolute;
+    top: 330px;
+    left: -20px;
+    width: 200px;
+    height: auto;
 }
 /*------------------------------------- /Box-Storm -------------------------------------*/
 /*------------------------------------- Samurai-Honor -------------------------------------*/
 .Samurai-Honor{
+    position: relative;
     display: flex;
-    margin-bottom: 100px;
+    margin-bottom: 200px;
 }
 .Samurai-Honor .samurai {
+    width: 700px;
+    height: auto;
+    z-index: -1;
     margin: auto 0;
+    transform: translateX(-300px);
 
 }
-.Samurai-Honor .text .text-content{
-    margin-bottom: 50px;
+.Samurai-Honor .SH {
+    margin-top: 200px;
+    margin-bottom: 430px;
 }
-.Samurai-Honor .text .button-castom{
+.Samurai-Honor div p{
+    text-align: center;
+}
+.Samurai-Honor .text-content {
+    margin-left: 80px;
+    position: relative;
+    width: 620px;
+}
+.Samurai-Honor .button-custom {
+    position: absolute;
     background: linear-gradient(90deg, #242290 ,#629CD1 , #242290);
     background-size: 200%;
-    margin: 0 auto;
-    position: relative;
-    text-align: left;
+    bottom: 340px;
+    left: 80px;
+    width: auto;
 }
-.Samurai-Honor .text .button-castom:hover {
+.Samurai-Honor .button-custom:hover {
     background-position: -250px;
 }
-
-.Samurai-Honor .text .button-castom .box{
-    position: absolute;
-    top: -50px;
-    right: -15px;  
-}
 .bamboo {
+    transform: rotate(-20deg);
+    display: block;
     position: absolute;
-    left: 0px;
-    top: 1280px;
-    z-index: -1;
+    width: 200px;
+    height: auto;
+    left: -70px;
+    top: 375px;
+    z-index: 0;
 }
 /*------------------------------------- /Samurai-Honor -------------------------------------*/
-
 .futer .OWELL{
     display: block;
     margin-left: auto;
@@ -476,11 +532,11 @@ header nav{
     }
 }
 @media (width  <= 1220px) {
-    .conteiner{
+    .container{
         width: 390px;
     }
     .text-content {
-        font-size: 15px;
+        font-size: 13px;
         line-height: 17.2px;
         letter-spacing: 0.5px;
     }
@@ -489,16 +545,24 @@ header nav{
         line-height: 10.1px;
     }
     p {
-        font-size: 21px;
+        font-size: 20px;
         margin-bottom: 10px;
     }
     hr {
         width: 150px ;
     }
-    .button-castom {
+    .button-custom {
+        letter-spacing: 0.001px;
         margin: 0px;
         padding: 15px 20px;
         font-size: 15px;
+    }
+    .button-swipe {
+        border: 0px;
+        background-size: 150%;
+        padding: 10px 20px;
+        border-radius: 30px;
+        font-size: 20px;
     }
     .home {
         background-position-x: -300px;
@@ -553,16 +617,6 @@ header nav{
         width: 203px;
         margin: 10px 0 20px 0px;
     }
-    .button-swipe {
-        border: 0px;
-        background-size: 150%;
-        padding: 10px 20px;
-        border-radius: 30px;
-        font-size: 20px;
-    }
-    .button-swipe:hover {
-        background-position: 150px;
-    }
     .wait,.active {
         font-size: 15px;
     }
@@ -583,6 +637,7 @@ header nav{
         transform: translateX(20px);
     }
     .history .img-history {
+        z-index: -1;
         position: absolute;
         left: -40px;
         top: 50%;
@@ -595,62 +650,56 @@ header nav{
         position: relative;
         margin: 30px auto 30px auto;
     }
-    .history .text{
+    .history .block-history{
         z-index: 1;
-        width: 240px;
+        width: 230px;
         margin-right: 10px;
         margin-left: auto;
+    }
+    .history .block-history .text-content{
+        width: 220px;
+        margin: auto;
+    }
+    .history .block-history p{
+        text-align: center;
     }
     .convenience {
         display: none;
         margin: 30px auto;
     }
-    .convenience-two .one{
-        margin: 30px 0 15px 0;
-        display: flex;
-    }
-    .convenience-two .one .text-content{
-        margin-left: 10px;
-    }
-    .convenience-two .one .img-convenience{
-        margin: auto 0;
-        width: 130px;
-        height: 190px;
-    }
-    .convenience-two .two{
-        margin: 15px 0 30px 0;
-        display: flex;
-    }
-    .convenience-two .two .text-content{
-        justify-content: center;
-        width: 270px;
-    }
-    .convenience-two .two .img-convenience-two{
-        margin: auto 0;
-        width: 130px;
-        height: 190px;
-    }
     .convenience-two {
         display: block;
-    }
-    .convenience-two .text{
-        text-align: center;
-        width: 400px;
     }
     .idea {
         margin: 40px auto;
     }
-    .idea div .text-content {
+    .idea .idea-block .text-content {
         width: 300px;
         margin-bottom: 20px;
     }
-    .idea ul li {
-        width: 110px;
+    .idea ul {
+        display: block;
     }
-    .idea ul li img  {
+    .idea ul li {
+        border-radius: 20px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        width: 360px;
+    }
+    .idea ul li p {
+        margin-top: 5px;
+    }
+    .idea ul li .block-idea .text-content,
+    .idea ul li .block-idea {
+        margin: 0px 0px 0px 5px;
+        width: 275px;
+    }
+    .idea ul li  img  {
+        padding-top: 7px;
         width: 80px;
         height: 80px;
-        margin: 20px 0 20px 0;
+        margin: 0;
     }
     .idea ul .platforms:hover,
     .idea ul .community:hover {
@@ -660,77 +709,83 @@ header nav{
     .idea ul .languages:hover {
         background: var(--idea-center);
     }
-    .OWELL {
-        width: 220px;
-        height: auto;
-    }
-    .projects .text {
+    .projects .projects-text {
         margin: 30px auto 50px auto;
         width: 350px;
+    }
+    .Box-Storm {
+        margin-bottom: 100px;
     }
     .Box-Storm .mob {
         margin: auto 0;
         width: 200px;
         height: 170px;
     }
-    .Box-Storm .text {
+    .Box-Storm .BS {
         margin: 30px 10px 30px 0;
         width: 187px;
     }
-    .Box-Storm .text .text-content{
+    .Box-Storm .text-content{
         margin-bottom:  20px;
-
+        width: 187px;
     }
-    .Box-Storm .text .button-castom {
-        width: 220px;
-        transform: translateX(-90px);
+    .Box-Storm .button-custom {
+        bottom: -10px;
+        right: 10px;
+        padding-right: 50px;
+        width: 200px;
     }
-    .Box-Storm .text .button-castom .box{
+    .Box-Storm .button-custom .box{
         width: 70px;
         height: auto;
         position: absolute;
-        top: -20px;
-        right: -20px;  
+        top: -10px;
+        right: -10px;  
     }
-    .box_floor{
-        top: 380px;
-        width: 50px;
-        height: auto;
+    .Box-Storm  .box_two{
+        top: 220px;
+        left: -20px;
+        width: 75px;
     }
     .Samurai-Honor{
-        position: relative;
-        margin-bottom: 250px;
+        margin-bottom: 100px;
     }
-    .Samurai-Honor .text {
-        margin: 0px;
-        margin-left: 30px;
-        width: 240px;
-    }
-    .Samurai-Honor .text-content {
-        text-align: left;
-        width: 230px;
-    }
+
     .Samurai-Honor .samurai {
         position: absolute;
-        z-index: -1;
-        left: 90px;
-        top: -100px;
-        width: 370px;
-        height: 500px;
+        transform: none;
+        right: -20px;
+        top: 0;
+        width: 200px;
+        height: 300px;
     }
-    .Samurai-Honor .text .button-castom {
-        position: absolute;
-        left: 0;
-        bottom: -60px;
-        width: 225px;
+    .Samurai-Honor .SH {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 300px;
     }
-    .Samurai-Honor .text .text-content{
+    .Samurai-Honor .SH .text-content{
+        width: 270px;
+        margin-left: 20px;
         margin-bottom:  20px;
     }
-    .bamboo {
-        top: 670px;
-        width: 40px;
-        height: 140px;
+    .Samurai-Honor .button-custom {
+        width: 240px;
+        position: absolute;
+        padding: 15px 15px;
+        left: 0;
+        bottom: -20px;
+    }
 
+    .bamboo {
+        top: 100px;
+        left: -22px;
+        width: 50px;
+        height: 120px;
+        transform: rotate(-5deg);
+    }
+    .OWELL {
+        width: 220px;
+        height: auto;
     }
 }

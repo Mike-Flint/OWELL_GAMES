@@ -1,0 +1,775 @@
+
+@font-face {
+    font-family: 'Lato';
+    src: local('Lato Light'), local('Lato-Light'), url('../css/fonts/lato/latolight.woff2') format('woff2'), url('../css/fonts/lato/latolight.woff') format('woff'), url('../css/fonts/lato/latolight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Lato';
+    src: local('Lato Semibold'), local('Lato-Semibold'), url('../css/fonts/lato/latosemibold.woff2') format('woff2'), url('../css/fonts/lato/latosemibold.woff') format('woff'), url('../css/fonts/lato/latosemibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: local('Montserrat Light'), local('Montserrat-Light'), url('../css/fonts/Montserrat/Montserrat-SemiBold.woff2') format('woff2'), url('../css/fonts/Montserrat/Montserrat-SemiBold.woff') format('woff'), url('../css/fonts/Montserrat/Montserrat-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: local('Montserrat ExtraBold'), local('Montserrat-ExtraBold'), url('../css/fonts/Montserrat/Montserrat-ExtraBold.woff2') format('woff2'), url('../css/fonts/Montserrat/Montserrat-ExtraBold.woff') format('woff'), url('../css/fonts//Montserrat/Montserrat-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+}
+:root {
+    --bg-body:#14172f;
+    --text-header:#DDC493;
+    --text:#FFF3E5;
+    --bt-text:#000000;
+    --idea-center:#502A37;
+    --idea-lateral:#21192F;
+    --idea-center-h:#77344B;
+    --idea-lateral-h:#382954;
+    --menu-lang-h:#978c76;
+}
+html {
+    background-color: var(--bg-body);
+    overflow-x: hidden;
+    color: var(--text);
+}
+hr {
+    border-top: 4px dashed var(--text);
+    width: 400px;
+    margin: 0 auto;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+.text-content {
+    font-family: "Lato";
+    font-style: normal;
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 43.2px;
+    letter-spacing: 1.5px;
+}
+.mini-p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 37px;
+    font-weight: 600;
+    line-height: 45.1px;
+    text-align: center;
+}
+p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+.button-custom {
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    text-align: left;
+    background: linear-gradient(90deg, #F9C49F , #D67157,#F9C49F );
+    background-size: 150%;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 25px;
+    color: var(--text);
+    transition: all 0.7s ease;
+}
+.button-custom:hover{
+    background-position: 200px;
+}
+.hero .button-swipe {
+    margin-left: 170px;
+}
+.button-swipe {
+    border: 0px;
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    text-align: left;
+    background: linear-gradient(90deg, #F9C49F , #D67157,#F9C49F );
+    background-size: 150%;
+    padding: 20px 30px;
+    border-radius: 30px;
+    font-size: 30px;
+    color: var(--text);
+    transition: all 0.7s ease;
+}
+.button-swipe:hover {
+    background-position: 200px;
+}
+.home {
+    margin: 0 auto;
+    position: relative;
+    background-size: cover;
+    background-position-y: -200px;
+    background-repeat: no-repeat; 
+    width: 1800px;
+    height: 1100px; 
+}
+.home > * {
+    position: relative;
+    z-index: 2;
+}
+.home::before {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(281.48deg, rgba(20, 23, 47, 0) 40.59%, #14172F 90.17%);
+    pointer-events: none;
+}
+.home::after {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(125.26% 105.94% at 50.03% -22.9%, var(--bg-body) 10%, rgba(0, 0, 0, 0) 50%);
+    pointer-events: none;
+}
+.gradient-overlay  {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, var(--bg-body) 1%, rgba(0, 0, 0, 0) 20%);
+    pointer-events: none;
+}
+/*------------------------------------- header -------------------------------------*/
+header {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+
+}
+header nav{
+    width: 550px;
+    display: flex;
+    justify-content: space-between;
+}
+.wait,.active {
+    color: var(--text-header);}
+.active {
+    position: relative
+}
+.active img {
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    top: -5px;
+    width: 30px;
+    height: 30px;
+}
+.wait {
+    position: relative;
+}
+.wait::before{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #DDC493 ;
+    position: absolute;
+    left: 0px;
+    bottom: -2px;
+    transform: scale(0);
+    transition: all 200ms ease;
+}
+.wait:hover:before {
+    transform: scale(1);
+    transition: all 200ms ease;
+}
+/*------------------------------------- /header -------------------------------------*/
+/*------------------------------------- button language -------------------------------------*/
+.btn_language {
+    color: var(--bt-text);
+    display: flex;
+    flex: auto;
+    justify-content: center;
+    align-items: center;
+    border: 0px;
+    position: absolute;
+    top: 20px; 
+    right: 5px ; 
+    background: var(--text-header);
+    padding: 10px 7px 10px 7px;
+    border-radius: 18px;
+    transition: background 500ms ease;
+    width: 80px;
+    height: 50px; 
+    font-size: 25px;
+}
+.btn_language:hover {
+    background: var(--menu-lang-h);
+}
+.menu-language{
+    z-index: 999;
+    display: none;
+    position: absolute;
+    padding: 13px;
+    top: 65px;
+    right: 5px ; 
+    width: 168px;
+    height: 210px;
+    background: #DDC493;
+    border-radius:  15px 0px 15px 15px;
+}
+.menu-language ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.menu-language ul button{
+    border-style: none;
+    margin: 1px 3px;
+    width: 50px;
+    height: 37.5px;
+    transition: all 250ms ease;
+}
+.menu-language ul button:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+/*------------------------------------- /button language -------------------------------------*/
+
+/*------------------------------------- hero -------------------------------------*/
+.hero {
+    margin-top: 150px;
+}
+.hero .text-content {
+    width: 600px;
+    margin: 30px 0 30px 0;
+}
+.hero a {
+    margin-left: 180px;
+}
+/*------------------------------------- /hero -------------------------------------*/
+
+/*------------------------------------- history -------------------------------------*/
+.history {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+}
+.history .img-history {
+    flex: 0 0 auto; 
+    margin: auto 0;
+    width: 400px; 
+    height: 400px; 
+    background-size: cover; 
+}
+/*------------------------------------- /history -------------------------------------*/
+
+/*------------------------------------- idea -------------------------------------*/
+.idea {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.idea div .text-content {
+    width: 900px;
+    margin-bottom: 20px;
+}
+.idea ul {
+    display: flex;
+}
+.idea ul li {
+    border-radius: 50px;
+    padding: 10px;
+    width: 390px;
+    height: auto;
+    transition: all 0.5s ease;
+}
+.idea ul li img  {
+    width: 150px;
+    height: 150px;
+    margin: 40px 0 40px 0;
+}
+.idea ul li .block-idea .text-content,
+.idea ul li .block-idea {
+    width: 390px;
+}
+.idea ul .platforms,
+.idea ul .community {
+    background: var(--idea-lateral);
+}
+
+.idea ul .languages {
+    background: var(--idea-center);
+}
+.idea ul .platforms:hover,
+.idea ul .community:hover {
+    background: var(--idea-lateral-h);
+}
+
+.idea ul .languages:hover {
+    background: var(--idea-center-h);
+}
+/*------------------------------------- /idea -------------------------------------*/
+
+/*------------------------------------- convenience -------------------------------------*/
+.convenience {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between; 
+}
+.img-convenience {
+    margin: auto 0;
+    flex: 0 0 auto; 
+    width: 600px; 
+    height: 600px; 
+    background-size: cover; 
+}
+.convenience-two {
+    display: none;
+}
+.convenience-two div{
+    text-align: center;
+    width: 400px;
+}
+.convenience-two .one{
+    margin: 30px 0 15px 0;
+    display: flex;
+}
+.convenience-two .one .text-content{
+    margin-left: 10px;
+    width: 260px ;
+}
+.convenience-two .one .img-convenience{
+    z-index: -1;
+    margin: auto 0;
+    width: 130px;
+    height: 190px;
+}
+.convenience-two .two{
+    margin: 15px 0 30px 0;
+    display: flex;
+}
+.convenience-two .two .text-content{
+    justify-content: center;
+    width: 260px;
+    margin-left: 20px;
+}
+.convenience-two .two .img-convenience-two{
+    margin: auto 0;
+    width: 130px;
+    height: 190px;
+}
+/*------------------------------------- /convenience -------------------------------------*/
+.projects {
+    position: relative;
+}
+.projects .projects-text {
+    margin: 100px auto 200px auto;
+    text-align: center;
+    width: 900px;
+}
+/*------------------------------------- Box-Storm -------------------------------------*/
+.Box-Storm{
+    position: relative;
+    display: flex;
+    margin-bottom: 100px;
+}
+.Box-Storm div {
+    text-align: center;
+}
+.Box-Storm .text-content {
+    position: relative;
+    width: 600px;
+}
+.Box-Storm .text-content div{
+    text-align: right;
+}
+.Box-Storm .button-custom {
+    position: absolute;
+    background: linear-gradient(90deg, #90222B, #D16862, #90222B);
+    background-size: 200%;
+    bottom: -120px;
+    right: 0px;
+    width: auto;
+    padding-right: 170px;
+}
+.Box-Storm .button-custom:hover {
+    background-position: -250px;
+}
+.Box-Storm .button-custom div {
+    text-align: left;
+}
+.Box-Storm .button-custom .box{
+    position: absolute;
+    top: -50px;
+    right: -20px;  
+}
+.Box-Storm .mob {
+    margin: auto 0;
+    width: 550px;
+    height: 500px;
+}
+.Box-Storm .box_two{
+    z-index: -1;
+    position: absolute;
+    top: 400px;
+    left: -100px;
+    width: 200px;
+    height: auto;
+}
+/*------------------------------------- /Box-Storm -------------------------------------*/
+/*------------------------------------- Samurai-Honor -------------------------------------*/
+.Samurai-Honor{
+    position: relative;
+    display: flex;
+    margin-bottom: 200px;
+}
+.Samurai-Honor .samurai {
+    width: 700px;
+    height: auto;
+    z-index: -1;
+    margin: auto 0;
+    transform: translateX(-300px);
+
+}
+.Samurai-Honor .SH {
+    margin-top: 200px;
+}
+.Samurai-Honor div p{
+    text-align: center;
+}
+.Samurai-Honor .text-content {
+    margin-left: 80px;
+    position: relative;
+    width: 620px;
+}
+.Samurai-Honor .button-custom {
+    position: absolute;
+    background: linear-gradient(90deg, #242290 ,#629CD1 , #242290);
+    background-size: 200%;
+    bottom: -150px;
+    left: 30px;
+    width: auto;
+}
+.Samurai-Honor .button-custom:hover {
+    background-position: -250px;
+}
+.bamboo {
+    transform: rotate(-20deg);
+    display: block;
+    position: absolute;
+    width: 200px;
+    height: auto;
+    left: -70px;
+    top: 375px;
+    z-index: 0;
+}
+/*------------------------------------- /Samurai-Honor -------------------------------------*/
+.futer .OWELL{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+@media (width  <= 1960px) {
+    .home {
+        background-position-y: -200px;
+        background-position-x: 0px;
+        width: 1700px;
+    }
+
+}
+@media (width  <= 1820px) {
+    .home {
+        background-position-x: -100px;
+        width: 1500px;
+    }
+}
+@media (width  <= 1620px) {
+    .home {
+        background-position-x: -200px;
+        width: 1300px;
+    }
+}
+@media (width  <= 1420px) {
+    .home {
+        background-position-x: -400px;
+        width: 1100px;
+    }
+}
+@media (width  <= 1220px) {
+    .container{
+        width: 390px;
+    }
+    .text-content {
+        font-size: 13px;
+        line-height: 17.2px;
+        letter-spacing: 0.5px;
+    }
+    .mini-p {
+        font-size: 16px;
+        line-height: 10.1px;
+    }
+    p {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    hr {
+        width: 150px ;
+    }
+    .button-custom {
+        letter-spacing: 0.001px;
+        margin: 0px;
+        padding: 15px 20px;
+        font-size: 15px;
+    }
+    .button-swipe {
+        border: 0px;
+        background-size: 150%;
+        padding: 10px 20px;
+        border-radius: 30px;
+        font-size: 20px;
+    }
+    .home {
+        background-position-x: -300px;
+        background-position-y: -50px;
+        background-size: 800px 520px;
+        height: 500px; 
+        width: 390px;
+        margin-bottom: 20px;
+    }
+    .home::before {
+        background: linear-gradient(281.48deg, rgba(20, 23, 47, 0) 20.59%, #14172F 85.17%);
+    }
+    .gradient-overlay  {
+        background: linear-gradient(to left, var(--bg-body) 1%, rgba(0, 0, 0, 0) 20%);
+
+    }
+    .menu-language ul button:hover {
+        transform: scale(1);
+    }
+    .btn_language {
+        top: 18px; 
+        right: 5px ; 
+        padding: 7px 7px;
+        width: 60px;
+        height: 41px;
+        font-size: 15px;
+    }
+    .btn_language:hover {
+        background: var(--text-header);
+    }
+    .menu-language{
+        padding: 11px 10px;
+        top: 55px;
+        right: 5px ; 
+        width: 125px;
+        height: 170px;
+        
+    }
+    .menu-language ul button{
+        margin: 2px 2px;
+        width: 37.5px;
+        height: 25px;
+    }
+    .hero {
+        margin-left: 10px;
+        margin-top: 70px;
+    }
+    .hero .button-swipe {
+        margin-left: 20px;
+    }
+    .hero .text-content {
+        width: 203px;
+        margin: 10px 0 20px 0px;
+    }
+    .wait,.active {
+        font-size: 15px;
+    }
+    .active img {
+        position: absolute;
+        left: 28px;
+        top: -10px;
+        width: 15px;
+        height: 15px;
+    }
+    header {
+        transform: translateX(0px);
+        width: 380px;
+        justify-content: left;
+    }
+    header nav{
+        width: 270px;
+        transform: translateX(20px);
+    }
+    .history .img-history {
+        z-index: -1;
+        position: absolute;
+        left: -40px;
+        top: 50%;
+        bottom: 50%;
+        transform: translateY(-50%,-50%);
+        width: 220px; 
+        height: 220px; 
+    }
+    .history {
+        position: relative;
+        margin: 30px auto 30px auto;
+    }
+    .history .block-history{
+        z-index: 1;
+        width: 230px;
+        margin-right: 10px;
+        margin-left: auto;
+    }
+    .history .block-history .text-content{
+        width: 220px;
+        margin: auto;
+    }
+    .history .block-history p{
+        text-align: center;
+    }
+    .convenience {
+        display: none;
+        margin: 30px auto;
+    }
+    .convenience-two {
+        display: block;
+    }
+    .idea {
+        margin: 40px auto;
+    }
+    .idea .idea-block .text-content {
+        width: 300px;
+        margin-bottom: 20px;
+    }
+    .idea ul {
+        display: block;
+    }
+    .idea ul li {
+        border-radius: 20px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        width: 360px;
+    }
+    .idea ul li p {
+        margin-top: 5px;
+    }
+    .idea ul li .block-idea .text-content,
+    .idea ul li .block-idea {
+        margin: 0px 0px 0px 5px;
+        width: 275px;
+    }
+    .idea ul li  img  {
+        padding-top: 7px;
+        width: 80px;
+        height: 80px;
+        margin: 0;
+    }
+    .idea ul .platforms:hover,
+    .idea ul .community:hover {
+        background: var(--idea-lateral);
+    }
+
+    .idea ul .languages:hover {
+        background: var(--idea-center);
+    }
+    .projects .projects-text {
+        margin: 30px auto 50px auto;
+        width: 350px;
+    }
+    .Box-Storm .mob {
+        margin: auto 0;
+        width: 200px;
+        height: 170px;
+    }
+    .Box-Storm .BS {
+        margin: 30px 10px 30px 0;
+        width: 187px;
+    }
+    .Box-Storm .text-content{
+        margin-bottom:  20px;
+        width: 187px;
+    }
+    .Box-Storm .BS .button-custom {
+        margin-left: 20px;
+        bottom: -80px;
+        padding-right: 50px;
+        width: 200px;
+    }
+    .Box-Storm .button-custom .box{
+        width: 70px;
+        height: auto;
+        position: absolute;
+        top: -10px;
+        right: -10px;  
+    }
+    .Box-Storm  .box_two{
+        top: 220px;
+        left: -20px;
+        width: 75px;
+    }
+    .Samurai-Honor{
+        margin-bottom: 250px;
+    }
+
+    .Samurai-Honor .samurai {
+        position: absolute;
+        transform: none;
+        right: -20px;
+        top: 0;
+        width: 200px;
+        height: 300px;
+    }
+    .Samurai-Honor .SH {
+        margin-top: 30px;
+        width: 300px;
+    }
+    .Samurai-Honor .SH .text-content{
+        width: 270px;
+        margin-left: 20px;
+        margin-bottom:  20px;
+    }
+    .Samurai-Honor .button-custom {
+        width: 240px;
+        position: absolute;
+        padding: 15px 15px;
+        left: 0;
+        bottom: -60px;
+    }
+
+    .bamboo {
+        top: 100px;
+        left: -22px;
+        width: 50px;
+        height: 120px;
+        transform: rotate(-5deg);
+    }
+    .OWELL {
+        width: 220px;
+        height: auto;
+    }
+}

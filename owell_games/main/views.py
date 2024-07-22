@@ -4,18 +4,31 @@ from rest_framework.response import Response
 
 # Create your views here.
 def main(request):
-    return render(request,"main/main.html")
+    return render(request,"main/main.html", list["en"])
+
+def languageSite(request,lang):
+    global list
+    print(lang)
+    if lang.lower() in ["en","ua"]:
+        print("sdfsd")
+        return render(request,"main/main.html", list[lang.lower()])
+
+    else:
+        return render(request,"main/main.html", list["en"])
 
 class MainAPILanguage(APIView):
     global list
     def get(self, request, lang):
-        for kay in list:
-            if kay == lang:
-                return Response(list[kay])
-
+        #["en","ua","fv","cn","es","in","kr","pl","tr","de","br","jp","it"]
+        if lang.lower() in ["en","ua"]:
+            print(lang)
+            return Response(list[lang.lower()])
+            
+        return Response(list["en"])
 
 list = {
     "ua" : {
+        "lng" : "Ua",
         "About_us" : "Про нас",
         "owell_games" : "Owell games це українська команда розробки ігор. Яка зацікавленна в максимальній продуктивності та прекрасному результаті який принесе радість нашім гравцям. ",
         "more_about_us" : "Більше про нас",
@@ -44,6 +57,7 @@ list = {
         "more_about_SH" : "Детальніше про Samurai Honor"
     },
     "en" : {
+        "lng" : "En",
         "About_us" : "About us",
         "owell_games" : "Owell games is a Ukrainian team game development team. Which is is interested in maximizing productivity and excellent results that will bring joy to our players. ",
         "more_about_us" : "More about us",
