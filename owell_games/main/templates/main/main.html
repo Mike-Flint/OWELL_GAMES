@@ -10,14 +10,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 </head>
 <body>
-    
     <div class="home">
-        <div class="gradient-overlay"></div>
         <header class="container">
             <nav>
-                <li><a class="wait text-content" href="">Box storm</a></li>
-                <li><a class="wait text-content" href="">Samurai honor</a></li>
-                <li><a class="active text-content" href=""><div class="lng-About_us">{{ About_us }}</div> <img src="{% static 'main/img/vector/Vector_arrow2.svg'%}" ></a></li>
+                <li><a class="wait text-content BS_link" href="{% url 'BS_MainLang' lng|lower  %}">Box Storm</a></li>
+                <li><a class="wait text-content SH_link" href="{% url 'SH_MainLang' lng|lower  %}">Samurai Honor</a></li>
+                <li><a class="active text-content Main_link" href="{% url 'MainLang' lng|lower  %}"><div class="lng-About_us">{{ About_us }}</div> <img src="{% static 'main/img/vector/Vector_arrow2.svg'%}" ></a></li>
             </nav>
         </header>
         <button class="btn_language" id="btn_language" onclick="menu_language()">
@@ -144,7 +142,7 @@
             </div>
         </div>
         <div class="Box-Storm container">
-            <a class="button-custom" href="">
+            <a class="button-custom BS_link" href="{% url 'BS_MainLang' lng|lower %}" >
                 <div class="lng-more_about_BS">{{ more_about_BS }} </div>                        
                 <img class="box" src="{% static 'main/img/Box_Storm/box.png'%}" alt="">
             </a>
@@ -160,7 +158,7 @@
             </div>
         </div>
         <div class="Samurai-Honor container">
-            <a class="button-custom lng-more_about_SH" href="">
+            <a class="button-custom lng-more_about_SH SH_link" href="{% url 'SH_MainLang' lng|lower  %}">
                 {{ more_about_SH }}                         
             </a>
             <img class="bamboo" src="{% static 'main/img/Samurai_Honor/bamboo.png'%}" alt="Bamboo">
@@ -179,6 +177,31 @@
         <img class="OWELL" src="{% static 'main/img/Owel_Games.png'%}" alt="Owel_Games">
     </div>
     <style>
+         @font-face {
+            font-family: 'Lato';
+            src: local('Lato Light'), local('Lato-Light'), url("{% static 'fonts/lato/latolight.woff2'%}") format('woff2'), url("{% static 'fonts/lato/latolight.woff'%}") format('woff'), url("{% static 'fonts/lato/latolight.ttf'%}") format('truetype');
+            font-weight: 300;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: local('Lato Semibold'), local('Lato-Semibold'), url("{% static 'fonts/lato/latosemibold.woff2'%}") format('woff2'), url("{% static 'fonts/lato/latosemibold.woff'%}") format('woff'), url("{% static 'fonts/lato/latosemibold.ttf'%}") format('truetype');
+            font-weight: 600;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Montserrat';
+            src: local('Montserrat Light'), local('Montserrat-Light'), url("{% static 'fonts/Montserrat/Montserrat-SemiBold.woff2'%}") format('woff2'), url("{% static 'fonts/Montserrat/Montserrat-SemiBold.woff'%}") format('woff'), url("{% static 'fonts/Montserrat/Montserrat-SemiBold.tff'%}") format('truetype');
+            font-weight: 600;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Montserrat';
+            src: local('Montserrat ExtraBold'), local('Montserrat-ExtraBold'), url("{% static 'fonts/Montserrat/Montserrat-ExtraBold.woff2'%}") format('woff2'), url("{% static 'fonts/Montserrat/Montserrat-ExtraBold.woff'%}") format('woff'), url("{% static 'fonts/Montserrat/Montserrat-ExtraBold.ttf'%}") format('truetype');
+            font-weight: 800;
+            font-style: normal;
+        }
+
         .home {
             background-image: url("{% static 'main/img/owell_forest.png'%}");
         }

@@ -59,6 +59,17 @@ async function language(lang){
     history.replaceState(null, '',  window.location.origin + "/" + lang);
     const requestUrl = `http://127.0.0.1:8000/api/v1/main/languages/${lang}`;
     const data = await JsonRequestUrl(requestUrl);
+
+    document.querySelectorAll('a.BS_link').forEach(link => {
+        link.href = window.location.origin + '/BoxStorm/' + data["lng"].toLowerCase();
+    });
+    document.querySelectorAll('a.SH_link').forEach(link => {
+        link.href = window.location.origin + '/SamuraiHonor/' + data["lng"].toLowerCase();
+    });
+    document.querySelectorAll('a.Main_link').forEach(link => {
+        link.href = window.location.origin + '/' + data["lng"].toLowerCase();
+    });
+
     for (let key in data) {
         let elem = document.querySelector('.lng-' + key);
         if (elem) {

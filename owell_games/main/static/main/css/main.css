@@ -1,28 +1,4 @@
 
-@font-face {
-    font-family: 'Lato';
-    src: local('Lato Light'), local('Lato-Light'), url('../css/fonts/lato/latolight.woff2') format('woff2'), url('../css/fonts/lato/latolight.woff') format('woff'), url('../css/fonts/lato/latolight.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Lato';
-    src: local('Lato Semibold'), local('Lato-Semibold'), url('../css/fonts/lato/latosemibold.woff2') format('woff2'), url('../css/fonts/lato/latosemibold.woff') format('woff'), url('../css/fonts/lato/latosemibold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Montserrat';
-    src: local('Montserrat Light'), local('Montserrat-Light'), url('../css/fonts/Montserrat/Montserrat-SemiBold.woff2') format('woff2'), url('../css/fonts/Montserrat/Montserrat-SemiBold.woff') format('woff'), url('../css/fonts/Montserrat/Montserrat-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Montserrat';
-    src: local('Montserrat ExtraBold'), local('Montserrat-ExtraBold'), url('../css/fonts/Montserrat/Montserrat-ExtraBold.woff2') format('woff2'), url('../css/fonts/Montserrat/Montserrat-ExtraBold.woff') format('woff'), url('../css/fonts//Montserrat/Montserrat-ExtraBold.ttf') format('truetype');
-    font-weight: 800;
-    font-style: normal;
-}
 ::-webkit-scrollbar {
     width: 15px;
     background: #14172f9c;
@@ -55,8 +31,16 @@ html {
     color: var(--text);
 }
 hr {
-    border-top: 4px dashed var(--text);
-    width: 400px;
+    height: 5px;
+    background: repeating-linear-gradient(to right,
+                transparent 0,
+                transparent 5px, /* Половина расстояния до первого штриха */
+                var(--text) 5px,
+                var(--text) 15px, /* Полный штрих */
+                transparent 15px,
+                transparent 20px /* Полное расстояние между штрихами */
+            );
+    width: 300px;
     margin: 0 auto;
 }
 .container{
@@ -81,7 +65,7 @@ hr {
 p {
     font-family: "Montserrat", sans-serif;
     font-weight: 800;
-    font-size: 45px;
+    font-size: 65px;
     margin-bottom: 20px;
 }
 .button-custom {
@@ -89,7 +73,7 @@ p {
     font-weight: 600;
     text-align: left;
     background: linear-gradient(90deg, #F9C49F , #D67157,#F9C49F );
-    background-size: 150%;
+    background-size: 190%;
     padding: 20px 30px;
     border-radius: 30px;
     font-size: 25px;
@@ -97,7 +81,7 @@ p {
     transition: all 0.7s ease;
 }
 .button-custom:hover{
-    background-position: 200px;
+    background-position: 0px;
 }
 .hero .button-swipe {
     margin-left: 170px;
@@ -139,29 +123,9 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(281.48deg, rgba(20, 23, 47, 0) 40.59%, #14172F 90.17%);
-    pointer-events: none;
-}
-.home::after {
-    content: '';
-    position: absolute;
-    z-index: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(125.26% 105.94% at 50.03% -22.9%, var(--bg-body) 10%, rgba(0, 0, 0, 0) 50%);
-    pointer-events: none;
-}
-.gradient-overlay  {
-    content: '';
-    position: absolute;
-    z-index: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to left, var(--bg-body) 1%, rgba(0, 0, 0, 0) 20%);
+    background: linear-gradient(281.48deg, rgba(20, 23, 47, 0) 40.59%, #14172F 90.17%),
+                radial-gradient(125.26% 105.94% at 50.03% -22.9%, var(--bg-body) 10%, rgba(0, 0, 0, 0) 50%),
+                linear-gradient(to left, var(--bg-body) 1%, rgba(0, 0, 0, 0) 20%);
     pointer-events: none;
 }
 /*------------------------------------- header -------------------------------------*/
@@ -419,7 +383,7 @@ header nav{
     position: absolute;
     background: linear-gradient(90deg, #90222B, #D16862, #90222B);
     background-size: 200%;
-    bottom: -100px;
+    bottom: -130px;
     right: 50px;
     width: auto;
     padding-right: 150px;
@@ -434,6 +398,7 @@ header nav{
     width: 150px;
     height: 150px;
     position: absolute;
+    transform: rotate(30deg);
     top: -40px;
     right: -20px;  
 }
@@ -573,11 +538,9 @@ header nav{
         margin-bottom: 20px;
     }
     .home::before {
-        background: linear-gradient(281.48deg, rgba(20, 23, 47, 0) 20.59%, #14172F 85.17%);
-    }
-    .gradient-overlay  {
-        background: linear-gradient(to left, var(--bg-body) 1%, rgba(0, 0, 0, 0) 20%);
-
+        background: linear-gradient(281.48deg, rgba(20, 23, 47, 0) 20.59%, #14172F 85.17%),
+                radial-gradient(125.26% 105.94% at 50.03% -22.9%, var(--bg-body) 10%, rgba(0, 0, 0, 0) 50%),
+                linear-gradient(to left, var(--bg-body) 1%, rgba(0, 0, 0, 0) 20%);
     }
     .menu-language ul button:hover {
         transform: scale(1);
@@ -621,9 +584,6 @@ header nav{
         font-size: 15px;
     }
     .active img {
-        position: absolute;
-        left: 28px;
-        top: -10px;
         width: 15px;
         height: 15px;
     }
@@ -730,10 +690,10 @@ header nav{
         width: 187px;
     }
     .Box-Storm .button-custom {
-        bottom: -10px;
+        bottom: -20px;
         right: 10px;
         padding-right: 50px;
-        width: 200px;
+        width: 210px;
     }
     .Box-Storm .button-custom .box{
         width: 70px;
@@ -786,6 +746,57 @@ header nav{
     }
     .OWELL {
         width: 220px;
+        height: auto;
+    }
+}
+
+@media (width  <= 389px){
+    .container{
+        width: 360px;
+    }
+    .home {
+        width: 360px;
+        background-position-x: -320px;
+
+    }
+
+    .menu-language{
+        width: 85px;
+        height: 240px;
+        
+    }
+    .hero  img {
+        width: 230px;
+        height: auto;
+    }
+    header nav{
+        width: 260px;
+    }
+    .history .block-history {
+        width: 200px;
+    }
+    .history .block-history .text-content {
+        width: 200px;
+    }
+    .idea ul li {
+        width: 340px;
+    }
+
+    .convenience-two div{
+        width: 360px;
+    }
+    .convenience-two .one .text-content{
+        width: 200px ;
+    }
+    .convenience-two .two .text-content{
+        width: 230px;
+    }
+    
+    .Box-Storm .BS .text-content{
+        width: 180px;
+    }
+    .Box-Storm .mob {
+        width: 170px;
         height: auto;
     }
 }

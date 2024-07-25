@@ -25,12 +25,13 @@ SECRET_KEY = 'django-insecure-=lv@(de+dh=dg$8fz1bd%1ud9wvren(y7jf2eig3%fi=-#m9a4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1"]
+ALLOWED_HOSTS = ["127.0.0.1",'owellgames.pythonanywhere.com']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    "API",
     "main",
     "Box_Storm",
     "Samurai_Honor",
