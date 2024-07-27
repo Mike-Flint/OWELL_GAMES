@@ -46,29 +46,35 @@ function scrolll(){
     }
 }
 
-
-location.href = window.location.pathname + '#' + document.getElementById("lng-lng").textContent.toLowerCase();
+if ( window.location.origin == window.location.href) {
+    history.replaceState(null, '',  window.location.origin + "/en");
+}
+else {
+    if (!["fv", "en", "cn", "es", "ua", "in", "kr", "pl", "tr", "de", "br", "jp", "it"].includes(window.location.pathname.replace(/\/$/, '').slice(-2).toLowerCase())){
+        history.replaceState(null, '',  window.location.origin + "/en");
+    }
+}
 
 async function language(lang){
-    location.href = window.location.pathname + '#' + lang;
-    const allLang = ["fv","en","cn","es","ua","in","kr","pl","tr","de","br","jp","it"];
-    let hash = window.location.hash;
-    hash = hash.substr(1);
-    if (!allLang.includes(hash)) {
-        location.href = window.location.pathname + '#en';
-        location.reload();
-    }
-    document.getElementById("lng-lng").textContent = lang.charAt(0).toUpperCase() + lang.slice(1);
-
-    const requestUrl = `http://127.0.0.1:8000/api/v1/main/languages/${lang}`;
+    history.replaceState(null, '',  window.location.origin + "/" + lang);
+    const requestUrl =  window.location.origin + `/api/v1/main/languages/${lang}`;
     const data = await JsonRequestUrl(requestUrl);
-    const jsonData = JSON.stringify(data);
+
+    document.querySelectorAll('a.BS_link').forEach(link => {
+        link.href = window.location.origin + '/BoxStorm/' + data["lng"].toLowerCase();
+    });
+    document.querySelectorAll('a.SH_link').forEach(link => {
+        link.href = window.location.origin + '/SamuraiHonor/' + data["lng"].toLowerCase();
+    });
+    document.querySelectorAll('a.Main_link').forEach(link => {
+        link.href = window.location.origin + '/' + data["lng"].toLowerCase();
+    });
+
     for (let key in data) {
         let elem = document.querySelector('.lng-' + key);
         if (elem) {
             elem.innerHTML = data[key];
         }
-
     }
 }
 
@@ -84,5 +90,3 @@ async function JsonRequestUrl(requestUrl) {
       console.error('There was a problem with the fetch operation:', error);
     }
   }
-
-

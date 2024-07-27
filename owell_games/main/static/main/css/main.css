@@ -7,6 +7,29 @@
     background-color: #2f366b;
     border-radius: 20px;
 }
+
+.AnimLeft, .AnimRight , .AnimTop {
+opacity: 0;
+transition: all 0.5s ease-out;
+}
+
+.AnimLeft {
+    transform: translateX(-100px);
+}
+.AnimRight {
+    transform: translateX(100px);
+}
+.AnimTop {
+    transform: translateY(50px);
+}
+
+.AnimOriginal {
+    opacity: 1;
+    transform: translateX(0) ;
+    transform: translateY(0);
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -34,11 +57,11 @@ hr {
     height: 5px;
     background: repeating-linear-gradient(to right,
                 transparent 0,
-                transparent 5px, /* Половина расстояния до первого штриха */
+                transparent 5px, 
                 var(--text) 5px,
-                var(--text) 15px, /* Полный штрих */
+                var(--text) 15px,
                 transparent 15px,
-                transparent 20px /* Полное расстояние между штрихами */
+                transparent 20px
             );
     width: 300px;
     margin: 0 auto;
@@ -78,7 +101,7 @@ p {
     border-radius: 30px;
     font-size: 25px;
     color: var(--text);
-    transition: all 0.7s ease;
+    transition: background 0.7s ease;
 }
 .button-custom:hover{
     background-position: 0px;
@@ -97,7 +120,7 @@ p {
     border-radius: 30px;
     font-size: 30px;
     color: var(--text);
-    transition: all 0.7s ease;
+    transition: background 0.7s ease;
 }
 .button-swipe:hover {
     background-position: 200px;
@@ -166,11 +189,11 @@ header nav{
     left: 0px;
     bottom: -2px;
     transform: scale(0);
-    transition: all 200ms ease;
+    transition: transform 200ms ease;
 }
 .wait:hover:before {
     transform: scale(1);
-    transition: all 200ms ease;
+    transition: transform 200ms ease;
 }
 /*------------------------------------- /header -------------------------------------*/
 /*------------------------------------- button language -------------------------------------*/
@@ -216,7 +239,7 @@ header nav{
     margin: 1px 3px;
     width: 50px;
     height: 37.5px;
-    transition: all 250ms ease;
+    transition: background 250ms ease;
 }
 .menu-language ul button:hover {
     transform: scale(1.2);
@@ -273,7 +296,7 @@ header nav{
     padding: 10px;
     width: 390px;
     height: auto;
-    transition: all 0.5s ease;
+    transition: background 0.5s ease;
 }
 .idea ul li img  {
     width: 150px;
@@ -692,7 +715,7 @@ header nav{
     .Box-Storm .button-custom {
         bottom: -20px;
         right: 10px;
-        padding-right: 50px;
+        padding-right: 70px;
         width: 210px;
     }
     .Box-Storm .button-custom .box{

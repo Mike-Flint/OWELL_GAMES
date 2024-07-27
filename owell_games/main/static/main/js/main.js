@@ -50,14 +50,14 @@ if ( window.location.origin == window.location.href) {
     history.replaceState(null, '',  window.location.origin + "/en");
 }
 else {
-    if (!["fv", "en", "cn", "es", "ua", "in", "kr", "pl", "tr", "de", "br", "jp", "it"].includes(window.location.pathname.substr(1).toLowerCase())){
+    if (!["fv", "en", "cn", "es", "ua", "in", "kr", "pl", "tr", "de", "br", "jp", "it"].includes(window.location.pathname.replace(/\/$/, '').slice(-2).toLowerCase())){
         history.replaceState(null, '',  window.location.origin + "/en");
     }
 }
 
 async function language(lang){
     history.replaceState(null, '',  window.location.origin + "/" + lang);
-    const requestUrl = `http://127.0.0.1:8000/api/v1/main/languages/${lang}`;
+    const requestUrl =  window.location.origin + `/api/v1/main/languages/${lang}`;
     const data = await JsonRequestUrl(requestUrl);
 
     document.querySelectorAll('a.BS_link').forEach(link => {

@@ -1,28 +1,34 @@
 
-@font-face {
-    font-family: 'Lato';
-    src: local('Lato Light'), local('Lato-Light'), url('../css/fonts/lato/latolight.woff2') format('woff2'), url('../css/fonts/lato/latolight.woff') format('woff'), url('../css/fonts/lato/latolight.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
+::-webkit-scrollbar {
+    width: 15px;
+    background: #14172f9c;
 }
-@font-face {
-    font-family: 'Lato';
-    src: local('Lato Semibold'), local('Lato-Semibold'), url('../css/fonts/lato/latosemibold.woff2') format('woff2'), url('../css/fonts/lato/latosemibold.woff') format('woff'), url('../css/fonts/lato/latosemibold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
+::-webkit-scrollbar-thumb {
+    background-color: #2f366b;
+    border-radius: 20px;
 }
-@font-face {
-    font-family: 'Montserrat';
-    src: local('Montserrat Light'), local('Montserrat-Light'), url('../css/fonts/Montserrat/Montserrat-SemiBold.woff2') format('woff2'), url('../css/fonts/Montserrat/Montserrat-SemiBold.woff') format('woff'), url('../css/fonts/Montserrat/Montserrat-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
+
+.AnimLeft, .AnimRight , .AnimTop {
+opacity: 0;
+transition: all 0.5s ease-out;
 }
-@font-face {
-    font-family: 'Montserrat';
-    src: local('Montserrat ExtraBold'), local('Montserrat-ExtraBold'), url('../css/fonts/Montserrat/Montserrat-ExtraBold.woff2') format('woff2'), url('../css/fonts/Montserrat/Montserrat-ExtraBold.woff') format('woff'), url('../css/fonts//Montserrat/Montserrat-ExtraBold.ttf') format('truetype');
-    font-weight: 800;
-    font-style: normal;
+
+.AnimLeft {
+    transform: translateX(-100px);
 }
+.AnimRight {
+    transform: translateX(100px);
+}
+.AnimTop {
+    transform: translateY(50px);
+}
+
+.AnimOriginal {
+    opacity: 1;
+    transform: translateX(0) ;
+    transform: translateY(0);
+}
+
 
 * {
     margin: 0;
@@ -48,8 +54,16 @@ html {
     color: var(--text);
 }
 hr {
-    border-top: 4px dashed var(--text);
-    width: 400px;
+    height: 5px;
+    background: repeating-linear-gradient(to right,
+                transparent 0,
+                transparent 5px, 
+                var(--text) 5px,
+                var(--text) 15px,
+                transparent 15px,
+                transparent 20px
+            );
+    width: 300px;
     margin: 0 auto;
 }
 .container{
@@ -74,7 +88,7 @@ hr {
 p {
     font-family: "Montserrat", sans-serif;
     font-weight: 800;
-    font-size: 45px;
+    font-size: 65px;
     margin-bottom: 20px;
 }
 .button-custom {
@@ -82,15 +96,15 @@ p {
     font-weight: 600;
     text-align: left;
     background: linear-gradient(90deg, #F9C49F , #D67157,#F9C49F );
-    background-size: 150%;
-    padding: 15px 30px;
+    background-size: 190%;
+    padding: 20px 30px;
     border-radius: 30px;
     font-size: 25px;
     color: var(--text);
-    transition: all 0.7s ease;
+    transition: background 0.7s ease;
 }
 .button-custom:hover{
-    background-position: 200px;
+    background-position: 0px;
 }
 .hero .button-swipe {
     margin-left: 170px;
@@ -102,11 +116,11 @@ p {
     text-align: left;
     background: linear-gradient(90deg, #F9C49F , #D67157,#F9C49F );
     background-size: 150%;
-    padding: 20px 30px;
+    padding: 15px 30px;
     border-radius: 30px;
     font-size: 30px;
     color: var(--text);
-    transition: all 0.7s ease;
+    transition: background 0.7s ease;
 }
 .button-swipe:hover {
     background-position: 200px;
@@ -132,29 +146,9 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(281.48deg, rgba(20, 23, 47, 0) 40.59%, #14172F 90.17%);
-    pointer-events: none;
-}
-.home::after {
-    content: '';
-    position: absolute;
-    z-index: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(125.26% 105.94% at 50.03% -22.9%, var(--bg-body) 10%, rgba(0, 0, 0, 0) 50%);
-    pointer-events: none;
-}
-.gradient-overlay  {
-    content: '';
-    position: absolute;
-    z-index: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to left, var(--bg-body) 1%, rgba(0, 0, 0, 0) 20%);
+    background: linear-gradient(281.48deg, rgba(20, 23, 47, 0) 40.59%, #14172F 90.17%),
+                radial-gradient(125.26% 105.94% at 50.03% -22.9%, var(--bg-body) 10%, rgba(0, 0, 0, 0) 50%),
+                linear-gradient(to left, var(--bg-body) 1%, rgba(0, 0, 0, 0) 20%);
     pointer-events: none;
 }
 /*------------------------------------- header -------------------------------------*/
@@ -195,11 +189,11 @@ header nav{
     left: 0px;
     bottom: -2px;
     transform: scale(0);
-    transition: all 200ms ease;
+    transition: transform 200ms ease;
 }
 .wait:hover:before {
     transform: scale(1);
-    transition: all 200ms ease;
+    transition: transform 200ms ease;
 }
 /*------------------------------------- /header -------------------------------------*/
 /*------------------------------------- button language -------------------------------------*/
@@ -231,8 +225,8 @@ header nav{
     padding: 13px;
     top: 65px;
     right: 5px ; 
-    width: 168px;
-    height: 210px;
+    width: 225px;
+    height: 170px;
     background: #DDC493;
     border-radius:  15px 0px 15px 15px;
 }
@@ -245,7 +239,7 @@ header nav{
     margin: 1px 3px;
     width: 50px;
     height: 37.5px;
-    transition: all 250ms ease;
+    transition: background 250ms ease;
 }
 .menu-language ul button:hover {
     transform: scale(1.2);
@@ -302,7 +296,7 @@ header nav{
     padding: 10px;
     width: 390px;
     height: auto;
-    transition: all 0.5s ease;
+    transition: background 0.5s ease;
 }
 .idea ul li img  {
     width: 150px;
@@ -394,7 +388,9 @@ header nav{
 .Box-Storm{
     position: relative;
     display: flex;
-    margin-bottom: 100px;
+    align-items:center ;
+    justify-content: center;
+    margin-bottom: 200px;
 }
 .Box-Storm div {
     text-align: center;
@@ -410,10 +406,10 @@ header nav{
     position: absolute;
     background: linear-gradient(90deg, #90222B, #D16862, #90222B);
     background-size: 200%;
-    bottom: -120px;
-    right: 0px;
+    bottom: -130px;
+    right: 50px;
     width: auto;
-    padding-right: 170px;
+    padding-right: 150px;
 }
 .Box-Storm .button-custom:hover {
     background-position: -250px;
@@ -422,20 +418,23 @@ header nav{
     text-align: left;
 }
 .Box-Storm .button-custom .box{
+    width: 150px;
+    height: 150px;
     position: absolute;
-    top: -50px;
+    transform: rotate(30deg);
+    top: -40px;
     right: -20px;  
 }
 .Box-Storm .mob {
     margin: auto 0;
-    width: 550px;
-    height: 500px;
+    width: 450px;
+    height: 400px;
 }
 .Box-Storm .box_two{
     z-index: -1;
     position: absolute;
-    top: 400px;
-    left: -100px;
+    top: 330px;
+    left: -20px;
     width: 200px;
     height: auto;
 }
@@ -456,6 +455,7 @@ header nav{
 }
 .Samurai-Honor .SH {
     margin-top: 200px;
+    margin-bottom: 430px;
 }
 .Samurai-Honor div p{
     text-align: center;
@@ -469,8 +469,8 @@ header nav{
     position: absolute;
     background: linear-gradient(90deg, #242290 ,#629CD1 , #242290);
     background-size: 200%;
-    bottom: -150px;
-    left: 30px;
+    bottom: 340px;
+    left: 80px;
     width: auto;
 }
 .Samurai-Honor .button-custom:hover {
@@ -561,11 +561,9 @@ header nav{
         margin-bottom: 20px;
     }
     .home::before {
-        background: linear-gradient(281.48deg, rgba(20, 23, 47, 0) 20.59%, #14172F 85.17%);
-    }
-    .gradient-overlay  {
-        background: linear-gradient(to left, var(--bg-body) 1%, rgba(0, 0, 0, 0) 20%);
-
+        background: linear-gradient(281.48deg, rgba(20, 23, 47, 0) 20.59%, #14172F 85.17%),
+                radial-gradient(125.26% 105.94% at 50.03% -22.9%, var(--bg-body) 10%, rgba(0, 0, 0, 0) 50%),
+                linear-gradient(to left, var(--bg-body) 1%, rgba(0, 0, 0, 0) 20%);
     }
     .menu-language ul button:hover {
         transform: scale(1);
@@ -609,9 +607,6 @@ header nav{
         font-size: 15px;
     }
     .active img {
-        position: absolute;
-        left: 28px;
-        top: -10px;
         width: 15px;
         height: 15px;
     }
@@ -701,6 +696,9 @@ header nav{
         margin: 30px auto 50px auto;
         width: 350px;
     }
+    .Box-Storm {
+        margin-bottom: 100px;
+    }
     .Box-Storm .mob {
         margin: auto 0;
         width: 200px;
@@ -714,11 +712,11 @@ header nav{
         margin-bottom:  20px;
         width: 187px;
     }
-    .Box-Storm .BS .button-custom {
-        margin-left: 20px;
-        bottom: -80px;
-        padding-right: 50px;
-        width: 200px;
+    .Box-Storm .button-custom {
+        bottom: -20px;
+        right: 10px;
+        padding-right: 70px;
+        width: 210px;
     }
     .Box-Storm .button-custom .box{
         width: 70px;
@@ -733,7 +731,7 @@ header nav{
         width: 75px;
     }
     .Samurai-Honor{
-        margin-bottom: 250px;
+        margin-bottom: 100px;
     }
 
     .Samurai-Honor .samurai {
@@ -746,6 +744,7 @@ header nav{
     }
     .Samurai-Honor .SH {
         margin-top: 30px;
+        margin-bottom: 30px;
         width: 300px;
     }
     .Samurai-Honor .SH .text-content{
@@ -758,7 +757,7 @@ header nav{
         position: absolute;
         padding: 15px 15px;
         left: 0;
-        bottom: -60px;
+        bottom: -20px;
     }
 
     .bamboo {
@@ -770,6 +769,57 @@ header nav{
     }
     .OWELL {
         width: 220px;
+        height: auto;
+    }
+}
+
+@media (width  <= 389px){
+    .container{
+        width: 360px;
+    }
+    .home {
+        width: 360px;
+        background-position-x: -320px;
+
+    }
+
+    .menu-language{
+        width: 85px;
+        height: 240px;
+        
+    }
+    .hero  img {
+        width: 230px;
+        height: auto;
+    }
+    header nav{
+        width: 260px;
+    }
+    .history .block-history {
+        width: 200px;
+    }
+    .history .block-history .text-content {
+        width: 200px;
+    }
+    .idea ul li {
+        width: 340px;
+    }
+
+    .convenience-two div{
+        width: 360px;
+    }
+    .convenience-two .one .text-content{
+        width: 200px ;
+    }
+    .convenience-two .two .text-content{
+        width: 230px;
+    }
+    
+    .Box-Storm .BS .text-content{
+        width: 180px;
+    }
+    .Box-Storm .mob {
+        width: 170px;
         height: auto;
     }
 }

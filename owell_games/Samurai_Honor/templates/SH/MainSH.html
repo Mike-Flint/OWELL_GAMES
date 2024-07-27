@@ -8,6 +8,7 @@
     <link rel="stylesheet"  type="text/css" href="{% static 'SH\css\MainSH.css' %}">
     <link rel="icon" href="{% static 'favicon_io/favicon.ico' %}" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="color-scheme" content="light only">
 </head>
 <body>
     <div class="home">
@@ -51,18 +52,18 @@
     </div>
     <hr>
     <div class="start container">
-        <div class="block-start">
+        <div class="block-start AnimLeft">
             <p class="lng-subheader_start">{{ subheader_start }}</p>
             <div class="text-content lng-start">
-                {{ samurai }}
+                {{ start }}
             </div>
         </div>
-        <img class="img-start" src="{% static 'SH/img/OG_logo_while.png'%}" alt="logo">
+        <img class="img-start AnimRight"  src="{% static 'SH/img/OG_logo_while.png'%}" alt="logo">
     </div>
     <hr>
     <div class="samurai container">
-        <img class="img-samurai" src="{% static 'SH/img/Samurai.png'%}" alt="mob">
-        <div class="block-samurai">             
+        <img class="img-samurai AnimLeft" src="{% static 'SH/img/Samurai.png'%}" alt="mob">
+        <div class="block-samurai AnimRight">             
             <p class="lng-subheader_samurai">{{ subheader_samurai }}</p>
             <div class="text-content lng-samurai">
                 {{ samurai }}
@@ -71,13 +72,13 @@
     </div>
     <hr>
     <div class="time container">
-        <div class="block-time">
+        <div class="block-time AnimLeft">
             <p class="lng-subheader_time">{{ subheader_time }}</p>
             <div class="text-content lng-time">
                 {{ time }}
             </div>
         </div>
-        <img class="img-time" src="{% static 'main\img\Samurai_Honor\bamboo.png'%}" alt="bamboo">
+        <img class="img-time AnimRight" src="{% static 'main\img\Samurai_Honor\bamboo.png'%}" alt="bamboo">
     </div>
     <hr>
     <div class="futer">
@@ -112,5 +113,6 @@
             background-image: url("{% static 'SH/img/SH_game.png'%}");
         }
     </style>
+    <script src="{% static 'main/js/Animations.js'%}"></script>
     <script src="{% static 'SH/js/MainSH.js'%}"></script>
 </body>

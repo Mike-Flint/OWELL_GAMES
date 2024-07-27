@@ -14,7 +14,7 @@ listSH = {
     "en" : {
         "lng" : "En",
         "About_us" : "About us",
-        "SH" : "Samurai Honor. The debut project of Owell Games. In which a lot of effort a lot of effort was put into it. And even if Samurai Honor is the starting point for Owell Games. Each of the participants is committed to the project 100% to the project. In an effort to create a gaming experience for you that will bring you good and positive emotions! ",
+        "SH" : "Samurai Honor. The debut project of Owell Games. In which a lot of effort was put into it. And even if Samurai Honor is the starting point for Owell Games. Each of the participants is committed to the project 100% to the project. In an effort to create a gaming experience for you that will bring you good and positive emotions! ",
         "more_about_us" : "More about us",
         "subheader_start" : "START OF DEVELOPMENT",
         "start" : "June 2024. Tom Owell gathered his talented friends to form Owell Games. At the first brainstorming session, it was decided that the company's debut project should be a runner-style game. In a popular setting. The Samurai setting was chosen. Since it has been and will be in the news for a long time. And this style of the game can bring certain advantages to the game. Like a simplified stylization. Which was perfect for a debut project to gain experience. Even if Tom had experience. The rest of the team had no previous experience with such projects.",
@@ -22,7 +22,19 @@ listSH = {
         "samurai" : "At the time of brainstorming, the team agreed that this was the perfect option. Why? Simple but beautiful stylization that allows you to create a laconic simple design that will add its own atmosphere. In addition, at that moment there were some projects from larger studios. Which also added more noise around the samurai theme. And since the whole team respects the culture of other countries. Including Japan. So we tried to work on the atmosphere of the game. ",
         "subheader_time" : "PRESENT TIME",
         "time" : "Today, Samurai Honor is in active development and should be released at the end of the third quarter of 2024. This project may be a debut. But the team is putting its best foot forward and hopes for your positive feedback that will help us understand all the necessary aspects in future developments."
-    }
+    },
+    "in" : {
+        "lng" : "In",
+        "About_us" : "हमारे बारे में",
+        "SH" : "समुराई ऑनर. ओवेल गेम्स का डेब्यू प्रोजेक्ट. जिसमें बहुत मेहनत की गई है. और भले ही समुराई ऑनर ओवेल गेम्स के लिए शुरुआती बिंदु है. प्रत्येक प्रतिभागी परियोजना के प्रति 100% प्रतिबद्ध है. आपके लिए एक गेमिंग अनुभव बनाने के प्रयास में जो आपको अच्छे और सकारात्मक भावनाएँ देगा!",
+        "more_about_us" : "हमारे बारे में अधिक",
+        "subheader_start" : "विकास की शुरुआत",
+        "start" : "जून 2024. टॉम ओवेल ने अपने प्रतिभाशाली दोस्तों को ओवेल गेम्स बनाने के लिए एकत्र किया. पहले विचार-मंथन सत्र में, यह निर्णय लिया गया कि कंपनी का डेब्यू प्रोजेक्ट रनर-स्टाइल गेम होना चाहिए. एक लोकप्रिय सेटिंग में. समुराई सेटिंग को चुना गया. क्योंकि यह लंबे समय तक समाचारों में रहा है और रहेगा. और इस शैली का खेल को कुछ लाभ मिल सकते हैं. जैसे एक सरल स्टाइलाइजेशन. जो अनुभव प्राप्त करने के लिए एक डेब्यू प्रोजेक्ट के लिए बिल्कुल उपयुक्त था. भले ही टॉम के पास अनुभव था. टीम के बाकी सदस्यों के पास ऐसे परियोजनाओं का कोई पूर्व अनुभव नहीं था.",
+        "subheader_samurai" : "समुराई क्यों",
+        "samurai" : "विचार-मंथन के समय, टीम सहमत हुई कि यह सबसे अच्छा विकल्प था. क्यों? सरल लेकिन सुंदर स्टाइलाइजेशन जो एक संक्षिप्त सरल डिजाइन बनाने की अनुमति देता है जो अपनी खुद की वातावरण जोड़ेगा. इसके अलावा, उस समय कुछ बड़े स्टूडियो से परियोजनाएँ थीं. जिसने समुराई थीम के चारों ओर अधिक शोर जोड़ा. और चूंकि पूरी टीम अन्य देशों की संस्कृति का सम्मान करती है. जिसमें जापान भी शामिल है. इसलिए हमने खेल के वातावरण पर काम करने की कोशिश की.",
+        "subheader_time" : "वर्तमान समय",
+        "time" : "आज, समुराई ऑनर सक्रिय विकास में है और इसे 2024 की तीसरी तिमाही के अंत में रिलीज़ किया जाना चाहिए. यह प्रोजेक्ट डेब्यू हो सकता है. लेकिन टीम अपनी पूरी कोशिश कर रही है और आपकी सकारात्मक प्रतिक्रिया की उम्मीद कर रही है जो हमें भविष्य के विकास में सभी आवश्यक पहलुओं को समझने में मदद करेगी."
+    },
 }
 
 
@@ -51,7 +63,20 @@ listBS = {
         "beginning" : "For its own reasons, Goose Guilde was dissolved in February of the same year. Due to personal reasons between the organizers. At that time, by personal agreement, no one could use the work to continue the development of Box Storm. Because of this, the development was stopped. In early July. Goose Guilde returned to announce that the team had split into two different companies. And both teams began to use the developments. And the official old name is Box Storm. And agreements with bloggers and other working aspects related to human contact.",
         "subheader_time" : "PRESENT TIME",
         "time" : "Today, Box Storm has received a new lease of life thanks to the development by Owell Games. Therefore, the game is currently in active development and should be released in the third quarter of 2024. Our team hopes to create the perfect game for you to kill time and get new sensations that will help you relax. And get a new gaming experience.",
+    },
+    "in" : {
+        "lng" : "In",
+        "About_us" : "हमारे बारे में",
+        "BS" : "बॉक्स स्टॉर्म. यह एक प्रोजेक्ट है जिसकी शुरुआत जनवरी 2024 में हुई थी. लेकिन टॉम ओवेल और उनके सहयोगियों के बीच मतभेदों के कारण, प्रोजेक्ट को बंद कर दिया गया था. छह महीने बाद, टॉम ने अपना खुद का प्रोजेक्ट, ओवेल गेम्स, बनाया. और वह बॉक्स स्टॉर्म को वापस लाने में सफल हुए. जिसे अब सक्रिय रूप से अंतिम रूप दिया जा रहा है और रिलीज के लिए तैयार किया जा रहा है.",
+        "more_about_us" : "हमारे बारे में अधिक",
+        "subheader_start" : "विकास की शुरुआत",
+        "start" : "जनवरी 2024 में, टॉम ओवेल. उन्होंने और उनके दोस्त ने एक छोटी कंपनी का आयोजन किया जिसे गूस गिल्ड कहा गया. और उनका पहला गेम मज़े के लिए एक साधारण खेल होना था. और यह बॉक्स स्टॉर्म था. जो उस समय केवल दो छात्रों का प्रोजेक्ट था जो अपना पहला प्रोजेक्ट बनाना चाहते थे. जिसमें उन्होंने अपनी आत्मा, शक्ति और प्रयास डाले. उनका लक्ष्य एक ऐसा प्रोजेक्ट बनाना था जो उन्हें खुद पसंद आए. उनकी ऑडियंस को. और उन्होंने अधिकतम आराम पैदा करने की कोशिश की.",
+        "subheader_beginning" : "एक नई शुरुआत",
+        "beginning" : "अपने कारणों के लिए, गूस गिल्ड उसी वर्ष फरवरी में भंग कर दी गई. आयोजकों के बीच व्यक्तिगत कारणों के कारण. उस समय, व्यक्तिगत समझौते से, कोई भी काम का उपयोग बॉक्स स्टॉर्म के विकास को जारी रखने के लिए नहीं कर सकता था. इस कारण से, विकास को रोक दिया गया था. जुलाई की शुरुआत में. गूस गिल्ड ने घोषणा की कि टीम दो अलग-अलग कंपनियों में विभाजित हो गई थी. और दोनों टीमों ने विकास कार्यों का उपयोग करना शुरू कर दिया. और आधिकारिक पुराना नाम बॉक्स स्टॉर्म. और ब्लॉगरों के साथ समझौते और मानव संपर्क से संबंधित अन्य कार्य पहलुओं को.",
+        "subheader_time" : "वर्तमान समय",
+        "time" : "आज, बॉक्स स्टॉर्म को ओवेल गेम्स के विकास के लिए धन्यवाद एक नया जीवन मिला है. इसलिए, खेल वर्तमान में सक्रिय विकास में है और इसे 2024 की तीसरी तिमाही में रिलीज किया जाना चाहिए. हमारी टीम को उम्मीद है कि आपके लिए समय काटने और नए अनुभव प्राप्त करने के लिए एक आदर्श खेल बनाने की. जो आपको आराम करने में मदद करेगा. और एक नया गेमिंग अनुभव प्राप्त करें."
     }
+
 }
 
 listMain = {
@@ -112,5 +137,34 @@ listMain = {
         "more_about_BS" : "Read more about Box Storm",
         "SH" : "Samurai Honor. The debut project of Owell Games. In which a lot of effort a lot of effort was put into it. And even if Samurai Honor is the starting point for Owell Games. Each of the participants is committed to the project 100% to the project. In an effort to create a gaming experience for you that will bring you good and positive emotions! ",
         "more_about_SH" : "Read more about Samurai Honor"
+    },
+    "in" : {
+        "lng" : "In",
+        "About_us" : "हमारे बारे में",
+        "owell_games" : "ओवेल गेम्स एक यूक्रेनी टीम गेम डेवलपमेंट टीम है. जो उत्पादकता को अधिकतम करने और उत्कृष्ट परिणाम प्राप्त करने में रुचि रखती है जो हमारे खिलाड़ियों को खुशी देगा.",
+        "more_about_us" : "हमारे बारे में अधिक",
+        "subheader_history" : "हमारी कहानी की शुरुआत",
+        "history" : "ओवेल गेम्स टीम का गठन टॉम ओवेल द्वारा 2024 में किया गया था. यह केवल यूक्रेनी डेवलपर्स से शुरू हुआ था. ओवेल गेम्स का पहला प्रोजेक्ट समुराई ऑनर था. कुछ समय बाद, वार्ता के परिणामस्वरूप, टॉम ओवेल अपनी अप्रकाशित गेम बॉक्स स्टॉर्म की सामग्री प्राप्त करने में सफल रहे. और अब दोनों प्रोजेक्ट्स पर टीम द्वारा सक्रिय रूप से काम किया जा रहा है और वे प्रोजेक्ट के महान संभावनाओं की उम्मीद कर रहे हैं.",
+        "subheader_idea" : "हमारे विचार",
+        "idea" : "आज, हमारे लिए यह स्पष्ट है कि बिना किसी विचार के, कोई भी प्रोजेक्ट अपने अधिकतम संभावनाओं तक नहीं पहुंच पाएगा. भले ही हम अभी शुरू कर रहे हैं, लेकिन अभी भी हमारे पास विचार और लक्ष्य हैं जिनकी हम दिशा में आगे बढ़ रहे हैं.",
+        "subheader_platform" : "प्लेटफ़ॉर्म",
+        "platform" : "हम मानते हैं कि गेम्स को सुलभ होना चाहिए और इसलिए वे सबसे सुलभ प्लेटफार्मों पर होंगे, और केवल विस्तार करेंगे.",
+        "platform_b" : "“आपकी सुविधा हमारी प्राथमिकता है”",
+        "subheader_language" : "भाषाएं",
+        "language" : "गेम प्रक्रिया के दौरान इंटरफ़ेस और टेक्स्ट बहुत महत्वपूर्ण पहलू होते हैं. इसलिए हम चाहते हैं कि हमारे गेम्स को आपकी मातृभाषा में खेलना आपके लिए सुविधाजनक हो.",
+        "subheader_community" : "समुदाय",
+        "community" : "हमारे गेम्स का मुख्य और प्रमुख उद्देश्य नए और सकारात्मक भावनाओं को देना है. इसलिए हम आपकी सुनने के लिए तैयार हैं और उन पहलुओं को सुधारने या जोड़ने के लिए तैयार हैं जो आपके गेमिंग अनुभव को बेहतर बनाएंगे.",
+        "subheader_convenience" : "सुविधा एक प्राथमिकता क्यों?",
+        "convenience" : "हमारी टीम में, गेमिंग अनुभव की सुविधा और निर्माण की सहजता हमारे लिए प्राथमिकता है. लेकिन सुविधा क्यों? कारण सरल है. जब आपको आरामदायक लगेगा, तो आप इष्टतम गेमिंग अनुभव प्राप्त कर सकते हैं. जब विकास में हमें सुविधा होगी तो हम आपको एक नया उच्च गुणवत्ता वाला प्रोजेक्ट प्रदान कर सकते हैं. इसलिए, हमारी मुख्य प्राथमिकता सुविधा है. हमारा पहला विचार हमेशा होता है “क्या खिलाड़ी के लिए इस तरह से खेलना सुविधाजनक होगा?”. या एक उदाहरण के रूप में, इस वेबसाइट को विकसित करते समय, हमने सोचा, “क्या उपयोगकर्ता के लिए जानकारी पढ़ना सुविधाजनक होगा? क्या प्रोग्रामर के लिए हमारे डिज़ाइन को बनाना सुविधाजनक होगा?”. यह आपके ऊपर है कि हमने अपना काम कितनी अच्छी तरह से किया है.",
+        "subheader_convenience_mb": "सुविधा एक प्राथमिकता क्यों?",
+        "convenience_mb" : "हमारी टीम में, गेमिंग अनुभव की सुविधा और निर्माण की सहजता हमारे लिए प्राथमिकता है. लेकिन सुविधा क्यों? कारण सरल है. जब आपको आरामदायक लगेगा, तो आप इष्टतम गेमिंग अनुभव प्राप्त कर सकते हैं. जब विकास में हमें सुविधा होगी तो हम आपको एक नया उच्च गुणवत्ता वाला प्रोजेक्ट प्रदान कर सकते हैं. इसलिए, हमारी मुख्य प्राथमिकता सुविधा है.",
+        "subheader_comfort_mb" : "हम आराम के बारे में सोचते हैं",
+        "comfort_mb" : "हमारा पहला विचार हमेशा होता है “क्या खिलाड़ी के लिए इस तरह से खेलना सुविधाजनक होगा?”. या एक उदाहरण के रूप में, इस वेबसाइट को विकसित करते समय, हमने सोचा, “क्या उपयोगकर्ता के लिए जानकारी पढ़ना सुविधाजनक होगा? क्या प्रोग्रामर के लिए हमारे डिज़ाइन को बनाना सुविधाजनक होगा?”. यह आपके ऊपर है कि हमने अपना काम कितनी अच्छी तरह से किया है.",
+        "subheader_projects" : "हमारे वर्तमान प्रोजेक्ट्स",
+        "projects" : "हमारी टीम विभिन्न प्रोजेक्ट्स पर सक्रिय रूप से काम कर रही है. नीचे आप देख सकते हैं कि वर्तमान प्रोजेक्ट्स जिन्हें हम समर्थन कर रहे हैं या विकसित कर रहे हैं.",
+        "BS" : "बॉक्स स्टॉर्म. यह एक प्रोजेक्ट है जिसकी शुरुआत जनवरी 2024 में हुई थी. लेकिन टॉम ओवेल और उनके सहयोगियों के बीच मतभेदों के कारण, प्रोजेक्ट को बंद कर दिया गया था. छह महीने बाद, टॉम ने अपना खुद का प्रोजेक्ट, ओवेल गेम्स, बनाया. और वह बॉक्स स्टॉर्म को वापस लाने में सफल हुए. जिसे अब सक्रिय रूप से अंतिम रूप दिया जा रहा है और रिलीज के लिए तैयार किया जा रहा है.",
+        "more_about_BS" : "बॉक्स स्टॉर्म के बारे में अधिक पढ़ें",
+        "SH" : "समुराई ऑनर. ओवेल गेम्स का डेब्यू प्रोजेक्ट. जिसमें बहुत मेहनत की गई है. और भले ही समुराई ऑनर ओवेल गेम्स के लिए शुरुआती बिंदु है. प्रत्येक प्रतिभागी परियोजना के प्रति 100% प्रतिबद्ध है. आपके लिए एक गेमिंग अनुभव बनाने के प्रयास में जो आपको अच्छे और सकारात्मक भावनाएँ देगा!",
+        "more_about_SH" : "समुराई ऑनर के बारे में अधिक पढ़ें"
     }
 }

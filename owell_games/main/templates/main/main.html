@@ -8,6 +8,7 @@
     <link rel="stylesheet"  type="text/css" href="{% static 'main/css/main.css' %}">
     <link rel="icon" href="{% static 'favicon_io/favicon.ico' %}" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="color-scheme" content="light only">
 </head>
 <body>
     <div class="home">
@@ -54,7 +55,7 @@
     <hr>
     <div class="history container">
         <div class="img-history container"></div>
-        <div class="block-history">
+        <div class="block-history AnimRight">
             <p class="lng-subheader_history">{{ subheader_history }}</p>
             <div class="text-content lng-history">
                 {{ history }}
@@ -63,14 +64,14 @@
     </div>
     <hr>
     <div class="idea container">
-        <div class="idea-block">
+        <div class="idea-block AnimTop">
             <p class="lng-subheader_idea">{{ subheader_idea }}</p>
             <div class="text-content lng-idea">
                 {{ idea }}
             </div>
             <br>
         </div>
-        <ul>
+        <ul class="AnimTop">
             <li class="platforms">
                 <img src="{% static 'main/img/platforms.png'%}" alt="">
                 <div class="block-idea">
@@ -83,7 +84,7 @@
                     </div>
                 </div>
             </li>
-            <li class="languages">
+            <li class="languages ">
                 <img src="{% static 'main/img/languages.png'%}" alt="">
                 <div class="block-idea">
                     <p class="mini-p lng-subheader_language">{{ subheader_language }}</p>
@@ -105,7 +106,7 @@
     </div>
     <hr>
     <div class="convenience container">
-        <div>
+        <div class="AnimLeft"> 
             <p class="lng-subheader_convenience">{{ subheader_convenience }}</p>
             <div class="text-content lng-convenience">
                 {{ convenience }}
@@ -114,18 +115,18 @@
         <div class="img-convenience"></div>
     </div>
     <div class="convenience-two container" >
-        <div class="one">
-            <div>
+        <div class="one ">
+            <div class="AnimLeft" >
                 <p class="lng-subheader_convenience_mb">{{ subheader_convenience_mb }}</p>
                 <div class="text-content lng-convenience_mb">
                     {{ convenience_mb }}
-                 </div>
+                </div>
             </div>
             <div class="img-convenience"></div>
         </div>
         <div class="two">
             <div class="img-convenience-two"></div>
-            <div >
+            <div  class="AnimRight">
                 <p class="lng-subheader_comfort_mb">{{ subheader_comfort_mb }}</p>
                 <div class="text-content lng-comfort_mb">
                     {{ comfort_mb }}
@@ -135,7 +136,7 @@
     </div>
     <hr>
     <div class="projects">
-        <div class="projects-text container">
+        <div class="projects-text container AnimTop">
             <p class="lng-subheader_projects">{{ subheader_projects }}</p>
             <div class="text-content lng-projects">
                 {{ projects }}
@@ -146,9 +147,9 @@
                 <div class="lng-more_about_BS">{{ more_about_BS }} </div>                        
                 <img class="box" src="{% static 'main/img/Box_Storm/box.png'%}" alt="">
             </a>
-            <img class="mob" src="{% static 'main/img/Box_Storm/mob.png'%}" alt="">
+            <img class="mob AnimRight" src="{% static 'main/img/Box_Storm/mob.png'%}" alt="">
             <img class="box_two" src="{% static 'main/img/Box_Storm/box_two.png'%}" alt="">
-            <div class="BS">
+            <div class="BS AnimLeft">
                 <p>BOX STORM</p>
                 <div class="text-content">
                     <div class="lng-BS">
@@ -162,7 +163,7 @@
                 {{ more_about_SH }}                         
             </a>
             <img class="bamboo" src="{% static 'main/img/Samurai_Honor/bamboo.png'%}" alt="Bamboo">
-            <div class="SH">
+            <div class="SH AnimRight">
                 <p>SAMURAI HONOR</p>
                 <div class="text-content">
                     <div class="lng-SH">
@@ -170,14 +171,14 @@
                     </div>
                 </div>
             </div>
-            <img class="samurai" src="{% static 'main/img/Samurai_Honor/samurai.png'%}" alt="Samurai">
+            <img class="samurai AnimLeft" src="{% static 'main/img/Samurai_Honor/samurai.png'%}" alt="Samurai">
         </div>
     </div>
     <div class="futer">
         <img class="OWELL" src="{% static 'main/img/Owel_Games.png'%}" alt="Owel_Games">
     </div>
     <style>
-         @font-face {
+        @font-face {
             font-family: 'Lato';
             src: local('Lato Light'), local('Lato-Light'), url("{% static 'fonts/lato/latolight.woff2'%}") format('woff2'), url("{% static 'fonts/lato/latolight.woff'%}") format('woff'), url("{% static 'fonts/lato/latolight.ttf'%}") format('truetype');
             font-weight: 300;
@@ -235,6 +236,7 @@
             }
         }
     </style>
+    <script src="{% static 'main/js/Animations.js'%}"></script>
     <script src="{% static 'main/js/main.js'%}"></script>
 </body>
 </html>
