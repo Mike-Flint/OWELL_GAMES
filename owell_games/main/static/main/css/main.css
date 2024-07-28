@@ -537,7 +537,7 @@ header nav{
         margin-bottom: 10px;
     }
     hr {
-        width: 150px ;
+        width: 200px ;
     }
     .button-custom {
         letter-spacing: 0.001px;
@@ -821,5 +821,9 @@ header nav{
     .Box-Storm .mob {
         width: 170px;
         height: auto;
+    }
+    .Samurai-Honor .SH .text-content{
+        width: 230px;
+        margin-left: 30px;
     }
 }
