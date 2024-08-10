@@ -1,4 +1,4 @@
-
+/*------------------------------------- Scrollbar -------------------------------------*/
 ::-webkit-scrollbar {
     width: 15px;
     background: #14172f9c;
@@ -7,7 +7,9 @@
     background-color: #2f366b;
     border-radius: 20px;
 }
+/*------------------------------------- /Scrollbar -------------------------------------*/
 
+/*------------------------------------- Animation -------------------------------------*/
 .AnimLeft, .AnimRight {
 opacity: 0;
 transition: all 0.5s ease-out;
@@ -20,19 +22,17 @@ transition: all 0.5s ease-out;
 .AnimRight {
     transform: translateX(100px);
 }
-
 .img-time.AnimRight{
     transform: rotate(-20deg)  translateX(50px);
 }
 .img-time.AnimRight.AnimOriginal{
     transform: rotate(-30deg) translateX(0);
 }
-
-
 .AnimOriginal {
     opacity: 1;
     transform: translateX(0);
 }
+/*------------------------------------- /Animation -------------------------------------*/
 
 * {
     margin: 0;
@@ -185,6 +185,7 @@ header nav{
     transition: transform 200ms ease;
 }
 /*------------------------------------- /header -------------------------------------*/
+
 /*------------------------------------- button language -------------------------------------*/
 .btn_language {
     color: var(--bt-text);
@@ -252,6 +253,7 @@ header nav{
 }
 /*------------------------------------- /hero -------------------------------------*/
 
+/*------------------------------------- Start -------------------------------------*/
 .start {
     text-align: center;
     margin-top: 75px;
@@ -270,7 +272,9 @@ header nav{
     height: auto; 
     background-size: cover; 
 }
+/*------------------------------------- /Start -------------------------------------*/
 
+/*------------------------------------- Deginning -------------------------------------*/
 .beginning {
     text-align: center;
     margin-top: 75px;
@@ -290,7 +294,9 @@ header nav{
     height: auto; 
     background-size: cover; 
 }
+/*------------------------------------- /Deginning -------------------------------------*/
 
+/*------------------------------------- Time -------------------------------------*/
 .time {
     text-align: center;
     margin-top: 150px;
@@ -312,7 +318,7 @@ header nav{
     height: auto; 
     background-size: cover; 
 }
-
+/*------------------------------------- /Time -------------------------------------*/
 .futer .OWELL{
     display: block;
     margin-left: auto;
@@ -349,7 +355,7 @@ header nav{
     }
 }
 @media (width  <= 1220px) {
-     .container{
+    .container{
         width: 390px;
     }
     .text-content {
@@ -375,6 +381,8 @@ header nav{
         border-radius: 30px;
         font-size: 20px;
     }
+
+
     .home {
         background-position-x: -100px;
         background-position-y: -100px;
@@ -392,6 +400,8 @@ header nav{
     .menu-language ul button:hover {
         transform: scale(1);
     }
+
+
     .btn_language {
         top: 18px; 
         right: 5px ; 
@@ -403,6 +413,8 @@ header nav{
     .btn_language:hover {
         background: var(--text-header);
     }
+
+
     .menu-language{
         padding: 11px 10px;
         top: 55px;
@@ -416,6 +428,8 @@ header nav{
         width: 37.5px;
         height: 25px;
     }
+
+
     .hero {
         margin-left: 10px;
         margin-top: 40px;
@@ -432,6 +446,8 @@ header nav{
         width: 230px;
         margin: 10px 0 10px 0px;
     }
+
+
     .wait,.active {
         font-size: 15px;
     }
@@ -439,6 +455,8 @@ header nav{
         width: 15px;
         height: 15px;
     }
+
+
     header {
         transform: translateX(0px);
         width: 380px;
@@ -460,7 +478,6 @@ header nav{
         margin-right: 10px;
     }
     .start .block-start .text-content{
-
         width: 200px;
         margin: auto;
     }
@@ -470,6 +487,7 @@ header nav{
         height: auto;
         width: 300px;
     }
+
 
     .beginning {
         margin: 30px auto 50px auto;
@@ -481,6 +499,7 @@ header nav{
     }
     .beginning .block-beginning .text-content{
 
+
         width: 200px;
         margin: auto;
     }
@@ -488,6 +507,7 @@ header nav{
         height: auto;
         width: 150px;
     }
+
 
     .time {
         position: relative;
@@ -510,6 +530,8 @@ header nav{
         height: auto;
         width: 200px;
     }
+
+
     .futer .OWELL {
         margin-top: 100px;
         width: 220px;
@@ -532,7 +554,6 @@ header nav{
     .home {
         width: 360px;
         background-position-x: -110px;
-
     }
 
     .menu-language{
@@ -540,6 +561,7 @@ header nav{
         height: 240px;
         
     }
+
     header nav{
         width: 260px;
     }
@@ -547,6 +569,7 @@ header nav{
     .start .img-start {
         right: -300px;
     }
+    
     .time .img-time {
         right: -100px;
     }

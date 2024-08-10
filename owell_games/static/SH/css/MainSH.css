@@ -140,7 +140,6 @@ p {
     pointer-events: none;
 }
 
-
 /*------------------------------------- header -------------------------------------*/
 header {
 
@@ -259,6 +258,7 @@ header nav{
 
 /*------------------------------------- /hero -------------------------------------*/
 
+/*------------------------------------- Start -------------------------------------*/
 .start {
     text-align: center;
     margin-top: 75px;
@@ -277,7 +277,9 @@ header nav{
     height: auto; 
     background-size: cover; 
 }
+/*------------------------------------- /Start -------------------------------------*/
 
+/*------------------------------------- Samurai -------------------------------------*/
 .samurai {
     text-align: center;
     margin-top: 75px;
@@ -297,7 +299,9 @@ header nav{
     height: auto; 
     background-size: cover; 
 }
+/*------------------------------------- /Samurai -------------------------------------*/
 
+/*------------------------------------- Time -------------------------------------*/
 .time {
     text-align: center;
     margin-top: 75px;
@@ -319,6 +323,7 @@ header nav{
     height: auto; 
     background-size: cover; 
 }
+/*------------------------------------- /Time -------------------------------------*/
 
 .futer .OWELL{
     display: block;
@@ -327,6 +332,7 @@ header nav{
     margin-top: 200px;
     margin-bottom: 50px;
 }
+
 @media (width  <= 1820px) {
     .home {
         background-position-y: -130px;
@@ -356,7 +362,7 @@ header nav{
     }
 }
 @media (width  <= 1220px) {
-     .container{
+    .container{
         width: 390px;
     }
     .text-content {
@@ -399,6 +405,8 @@ header nav{
     .menu-language ul button:hover {
         transform: scale(1);
     }
+
+
     .btn_language {
         top: 18px; 
         right: 5px ; 
@@ -423,6 +431,8 @@ header nav{
         width: 37.5px;
         height: 25px;
     }
+
+
     .hero {
         margin-left: 10px;
         margin-top: 40px;
@@ -430,7 +440,6 @@ header nav{
     .hero  img {
         width: 220px;
         height: auto;
-
     }
     .hero .button-swipe {
         margin-left: 30px;
@@ -439,14 +448,20 @@ header nav{
         width: 230px;
         margin: 10px 0 10px 0px;
     }
+
+
     .wait,.active {
         font-size: 15px;
     }
+
+
     .active img {
         position: absolute;
         width: 15px;
         height: 15px;
     }
+
+
     header {
         transform: translateX(0px);
         width: 380px;
@@ -457,11 +472,11 @@ header nav{
         transform: translateX(20px);
     }
 
+
     .start {
         position: relative;
     }
     .start .block-start{
-
         z-index: 1;
         width: 350px;
         margin: 0 auto;
@@ -473,6 +488,7 @@ header nav{
         width: 300px;
     }
 
+
     .samurai {
         margin: 30px auto 50px auto;
     }
@@ -483,7 +499,6 @@ header nav{
         margin-left: 45px;
     }
     .samurai .block-samurai .text-content{
-
         width: 200px;
         margin: auto;
     }
@@ -491,6 +506,7 @@ header nav{
         height: auto;
         width: 130px;
     }
+
 
     .time {
         position: relative;
@@ -512,6 +528,8 @@ header nav{
         height: auto;
         width: 100px;
     }
+
+
     .futer .OWELL {
         margin-top: 100px;
         width: 220px;
@@ -523,10 +541,10 @@ header nav{
     .container{
         width: 360px;
     }
+
     .home {
         width: 360px;
         background-position-x: -260px;
-
     }
 
     .menu-language{
@@ -534,10 +552,12 @@ header nav{
         height: 240px;
         
     }
+
     .hero  img {
         width: 230px;
         height: auto;
     }
+
     header nav{
         width: 260px;
     }
@@ -546,11 +566,11 @@ header nav{
         width: 300px;
         margin: 0 auto;
     }
+
     .samurai .block-samurai{
         width: 170px;
     }
     .samurai .block-samurai .text-content{
-
         width: 170px;
         margin: auto;
     }

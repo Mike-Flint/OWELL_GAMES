@@ -25,7 +25,7 @@ transition: all 0.5s ease-out;
 
 .AnimOriginal {
     opacity: 1;
-    transform: translateX(0) ;
+    transform: translateX(0);
     transform: translateY(0);
 }
 
@@ -537,7 +537,7 @@ header nav{
         margin-bottom: 10px;
     }
     hr {
-        width: 200px ;
+        width: 150px ;
     }
     .button-custom {
         letter-spacing: 0.001px;
@@ -552,6 +552,19 @@ header nav{
         border-radius: 30px;
         font-size: 20px;
     }
+
+
+    header {
+        transform: translateX(0px);
+        width: 380px;
+        justify-content: left;
+    }
+    header nav{
+        width: 270px;
+        transform: translateX(20px);
+    }
+
+
     .home {
         background-position-x: -300px;
         background-position-y: -50px;
@@ -565,9 +578,8 @@ header nav{
                 radial-gradient(125.26% 105.94% at 50.03% -22.9%, var(--bg-body) 10%, rgba(0, 0, 0, 0) 50%),
                 linear-gradient(to left, var(--bg-body) 1%, rgba(0, 0, 0, 0) 20%);
     }
-    .menu-language ul button:hover {
-        transform: scale(1);
-    }
+
+
     .btn_language {
         top: 18px; 
         right: 5px ; 
@@ -578,6 +590,11 @@ header nav{
     }
     .btn_language:hover {
         background: var(--text-header);
+    }
+
+
+    .menu-language ul button:hover {
+        transform: scale(1);
     }
     .menu-language{
         padding: 11px 10px;
@@ -592,6 +609,8 @@ header nav{
         width: 37.5px;
         height: 25px;
     }
+
+
     .hero {
         margin-left: 10px;
         margin-top: 70px;
@@ -603,6 +622,8 @@ header nav{
         width: 203px;
         margin: 10px 0 20px 0px;
     }
+
+
     .wait,.active {
         font-size: 15px;
     }
@@ -610,15 +631,8 @@ header nav{
         width: 15px;
         height: 15px;
     }
-    header {
-        transform: translateX(0px);
-        width: 380px;
-        justify-content: left;
-    }
-    header nav{
-        width: 270px;
-        transform: translateX(20px);
-    }
+
+
     .history .img-history {
         z-index: -1;
         position: absolute;
@@ -646,6 +660,8 @@ header nav{
     .history .block-history p{
         text-align: center;
     }
+
+    
     .convenience {
         display: none;
         margin: 30px auto;
@@ -653,6 +669,8 @@ header nav{
     .convenience-two {
         display: block;
     }
+
+
     .idea {
         margin: 40px auto;
     }
@@ -692,10 +710,14 @@ header nav{
     .idea ul .languages:hover {
         background: var(--idea-center);
     }
+
+
     .projects .projects-text {
         margin: 30px auto 50px auto;
         width: 350px;
     }
+
+
     .Box-Storm {
         margin-bottom: 100px;
     }
@@ -730,10 +752,11 @@ header nav{
         left: -20px;
         width: 75px;
     }
+
+    
     .Samurai-Honor{
         margin-bottom: 100px;
     }
-
     .Samurai-Honor .samurai {
         position: absolute;
         transform: none;
@@ -760,6 +783,7 @@ header nav{
         bottom: -20px;
     }
 
+
     .bamboo {
         top: 100px;
         left: -22px;
@@ -767,6 +791,8 @@ header nav{
         height: 120px;
         transform: rotate(-5deg);
     }
+
+
     .OWELL {
         width: 220px;
         height: auto;
@@ -780,27 +806,29 @@ header nav{
     .home {
         width: 360px;
         background-position-x: -320px;
-
     }
-
     .menu-language{
         width: 85px;
         height: 240px;
         
     }
+
     .hero  img {
         width: 230px;
         height: auto;
     }
+
     header nav{
         width: 260px;
     }
+
     .history .block-history {
         width: 200px;
     }
     .history .block-history .text-content {
         width: 200px;
     }
+
     .idea ul li {
         width: 340px;
     }
@@ -814,14 +842,16 @@ header nav{
     .convenience-two .two .text-content{
         width: 230px;
     }
-    
+
     .Box-Storm .BS .text-content{
         width: 180px;
     }
+
     .Box-Storm .mob {
         width: 170px;
         height: auto;
     }
+
     .Samurai-Honor .SH .text-content{
         width: 230px;
         margin-left: 30px;
