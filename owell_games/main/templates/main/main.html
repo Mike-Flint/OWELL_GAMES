@@ -18,6 +18,8 @@
         gtag('config', 'G-3SFYBWDK1W');
     </script>
 </head>
+<script src="{% static 'main/js/General.js'%}"></script>
+<script src="{% static 'main/js/main.js'%}"></script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q4H5STVX6L"></script>
 <script>
@@ -162,7 +164,7 @@
         <div class="Box-Storm container">
             <a class="button-custom BS_link" href="{% url 'BS_MainLang' lng|lower %}" >
                 <div class="lng-more_about_BS">{{ more_about_BS }} </div>                        
-                <img class="box" src="{% static 'main/img/Box_Storm/box.png'%}" alt="">
+                <img class="box" src="{% static 'main/img/Box_Storm/box.webp'%}" alt="">
             </a>
             <img class="mob AnimRight" src="{% static 'main/img/Box_Storm/mob.png'%}" alt="">
             <img class="box_two" src="{% static 'main/img/Box_Storm/box_two.png'%}" alt="">
@@ -221,23 +223,23 @@
         }
 
         .home {
-            background-image: url("{% static 'main/img/owell_forest.png'%}");
+            background-image: url("{% static 'main/img/owell_forest.webp'%}");
         }
         .img-convenience {
             background: radial-gradient(45.73% 53.95% at 50% 50%, rgba(20, 23, 47, 0) 63.93%, #14172F 93.31%),
-                        url("{% static 'main/img/owell_smartphone.png'%}");
+                        url("{% static 'main/img/owell_smartphone.webp'%}");
             background-position: center;
             background-repeat: no-repeat; 
         }
         .history .img-history {
             background: radial-gradient(45.73% 53.95% at 50% 50%, rgba(20, 23, 47, 0) 63.93%, #14172F 93.31%),
-                        url("{% static 'main/img/history.png'%}");
+                        url("{% static 'main/img/history.webp'%}");
             background-position: center;
             background-repeat: no-repeat; 
         }
         .img-convenience-two {
             background: radial-gradient(45.73% 53.95% at 50% 50%, rgba(20, 23, 47, 0) 63.93%, #14172F 93.31%),
-                        url("{% static 'main/img/owell_sleep.png'%}");
+                        url("{% static 'main/img/owell_sleep.webp'%}");
             background-position: center;
             background-repeat: no-repeat; 
         }

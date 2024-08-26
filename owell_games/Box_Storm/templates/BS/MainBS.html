@@ -10,6 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="color-scheme" content="light only">
 </head>
+<script src="{% static 'main/js/General.js'%}"></script>
+<script src="{% static 'BS/js/MainBS.js'%}"></script>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q4H5STVX6L"></script>
 <script>
@@ -87,7 +90,7 @@
                 {{ time }}
             </div>
         </div>
-        <img class="img-time AnimRight" src="{% static 'main/img/Box_Storm/box.png'%}" alt="box">
+        <img class="img-time AnimRight" src="{% static 'main/img/Box_Storm/box.webp'%}" alt="box">
     </div>
     <hr>
     <div class="futer">
@@ -119,9 +122,8 @@
             font-style: normal;
         }
         .home {
-            background-image: url("{% static 'BS/img/BS_game.png'%}");
+            background-image: url("{% static 'BS/img/BS_game.webp'%}");
         }
     </style>
-    <script src="{% static 'main/js/General.js'%}"></script>
-    <script src="{% static 'BS/js/MainBS.js'%}"></script>
+
 </body>
