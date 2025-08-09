@@ -26,6 +26,7 @@ SECRET_KEY = 'django-insecure-=lv@(de+dh=dg$8fz1bd%1ud9wvren(y7jf2eig3%fi=-#m9a4
 DEBUG = False
 
 ALLOWED_HOSTS = ["127.0.0.1",'owellgames.pythonanywhere.com',"owellgames.com","www.owellgames.com"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
