@@ -1,6 +1,6 @@
 # OWELL GAMES
 
-A web application developed with Django, designed for organizing and managing games.
+A web application developed with Django.
 
 ## View Live
 
